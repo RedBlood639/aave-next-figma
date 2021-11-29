@@ -88,7 +88,7 @@ const MyDashboard = () => {
                                         <td className={styles.collateral}>
                                             <div className={styles.yes}>Yes</div>
                                             <div className={styles.option}>
-                                                <label class={styles.switch}>
+                                                <label className={styles.switch}>
                                                     <input type="checkbox" checked />
                                                     <span className={`${styles.slider} ${styles.round}`}></span>
                                                 </label>
