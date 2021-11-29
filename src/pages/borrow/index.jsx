@@ -7,7 +7,6 @@ import styles from "./borrow.module.css";
 import Minimize from "../../assets/minimize.png";
 import SmallD from "../../assets/smallD.png";
 import BigD from "../../assets/bigD.png";
-import { getRouteRegex } from "next/dist/shared/lib/router/utils";
 
 const Borrow = () => {
     const router = useRouter();
@@ -45,13 +44,13 @@ const Borrow = () => {
                             <div>Borrow DAI</div>
                             <div className={styles.minimize}>
                                 <div>
-                                    <Image src={SmallD} alt="DField" />
+                                    <Image src={SmallD} alt="DField" width={7} height={14} />
                                 </div>
                                 <div>DAI Reserve Overview</div>
                             </div>
                             <div className={styles.minimize}>
                                 <div>
-                                    <Image src={Minimize} alt="Minimize" />
+                                    <Image src={Minimize} alt="Minimize" width={19} height={19} />
                                 </div>
                                 <div>Minimize</div>
                             </div>
@@ -91,7 +90,7 @@ const Borrow = () => {
                     <div className={styles.values}>
                         <div className={styles.left}>
                             <div>
-                                <Image src={BigD} alt="DField" />
+                                <Image src={BigD} alt="DField" width={29.3} height={29.3} />
                             </div>
                             <div className={styles.dinput}>
                                 <input

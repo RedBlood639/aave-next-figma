@@ -23,7 +23,7 @@ const CDeposit = () => {
                         <div className={styles.listmodalright}>
                             <div className={styles.normalblue}>All</div>
                             <div className={styles.normal}>
-                                <Image src={Divide} alt="Divide" />
+                                <Image src={Divide} alt="Divide" width={1} height={25.5} />
                             </div>
                             <div className={styles.normal}>Stable Coins</div>
                         </div>
@@ -32,7 +32,7 @@ const CDeposit = () => {
                         <div className={styles.search}>
                             <input type="text" className={styles.searchinput} placeholder="Search" />
                             <div>
-                                <Image src={Search} alt="Search" />
+                                <Image src={Search} alt="Search" width={11.81} height={11.81} />
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const CDeposit = () => {
                             <div className={styles.integrate}>
                                 <div className={styles.normal}>Profit Sharing Rate</div>
                                 <div className={styles.normal}>
-                                    <Image src={Down} alt="Down" />
+                                    <Image src={Down} alt="Down" width={10} height={5.71} />
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@ const CDeposit = () => {
                                     <div className={styles.tr} key={index}>
                                         <div className={styles.assets}>
                                             <div className={styles.image}>
-                                                <Image src={DAI} alt="DAI" />
+                                                <Image src={DAI} alt="DAI" width={41} height={41} />
                                             </div>
                                             <div className={styles.title}>{item.assets}</div>
                                         </div>
@@ -76,7 +76,7 @@ const CDeposit = () => {
                         <div className={styles.modalbody}>
                             <div className={styles.reassets}>
                                 <div className={styles.image}>
-                                    <Image src={DAI} alt="DAI" />
+                                    <Image src={DAI} alt="DAI" width={41} height={41} />
                                 </div>
                                 <div className={styles.title}>DAI</div>
                             </div>
@@ -85,7 +85,7 @@ const CDeposit = () => {
                         <div className={styles.modalbody}>
                             <div className={styles.reassets}>
                                 <div className={styles.image}>
-                                    <Image src={DAI} alt="DAI" />
+                                    <Image src={DAI} alt="DAI" width={41} height={41} />
                                 </div>
                                 <div className={styles.title}>Bitcoin</div>
                             </div>

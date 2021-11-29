@@ -46,7 +46,7 @@ const Header = () => {
             <div className={styles.header}>
                 <div className={styles.container}>
                     <div className={styles.logo} onClick={() => router.push('/')} >
-                        <Image src={Logo} alt="Logo" />
+                        <Image src={Logo} alt="Logo" layout='intrinsic' width={264} height={54} />
                     </div>
                     <div className={styles.menushowhide}>
                         <div className={styles.menu}>
@@ -54,7 +54,7 @@ const Header = () => {
                                 menuData.map((item, key) => (<div key={key} className={`${styles.menubar} ${router.route === item.path && styles.active}`} onClick={() => router.push(item.path)}>{item.title}</div>))
                             }
                             <div className={styles.divide}>
-                                <Image src={Divide} alt="Divide" />
+                                <Image src={Divide} alt="Divide" width={1} height={41} />
                             </div>
                             <div className={`${styles.menubar} ${router.route === '/addnetwork' && styles.active}`} onClick={() => router.push('/addnetwork')} >Add Network</div>
                         </div>

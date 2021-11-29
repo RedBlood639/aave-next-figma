@@ -18,12 +18,12 @@ const Footer = () => {
                 <div className={styles.container}>
                     <div className={styles.image}>
                         <div className={styles.logo}>
-                            <Image src={Logo} alt="Logo" />
+                            <Image src={Logo} alt="Logo" layout='intrinsic' width={264} height={54} />
                         </div>
                         <div className={styles.social}>
-                            <Image src={Facebook} alt="FaceBook" />
-                            <Image src={O} alt="O" />
-                            <Image src={Twitter} alt="Twitter" />
+                            <Image src={Facebook} alt="FaceBook" layout='intrinsic' width={36} height={36} />
+                            <Image src={O} alt="O" layout='intrinsic' width={36} height={36} />
+                            <Image src={Twitter} alt="Twitter" layout='intrinsic' width={36} height={36} />
                         </div>
                     </div>
                     <div className={styles.context}>

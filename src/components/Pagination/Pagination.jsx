@@ -24,31 +24,31 @@ const Pagination = ({ data, rowsPerPage }) => {
                         <div className={tstyles.hassets}>
                             <div className={tstyles.htassets}>Assets</div>
                             <div className={tstyles.image}>
-                                <Image src={Down} alt="Down" />
+                                <Image src={Down} alt="Down" width={11} height={6} />
                             </div>
                         </div>
                         <div className={tstyles.hmarket}>
                             <div className={tstyles.htmarket}>Market size</div>
                             <div className={tstyles.image}>
-                                <Image src={Down} alt="Down" />
+                                <Image src={Down} alt="Down" width={11} height={6} />
                             </div>
                         </div>
                         <div className={tstyles.htotal}>
                             <div className={tstyles.httotal}>Total <br /> borrowed</div>
                             <div className={tstyles.image}>
-                                <Image src={Down} alt="Down" />
+                                <Image src={Down} alt="Down" width={11} height={6} />
                             </div>
                         </div>
                         <div className={tstyles.hcommission}>
                             <div className={tstyles.htcommission}>Profit <br /> Commission <br /> Rate</div>
                             <div className={tstyles.image}>
-                                <Image src={Down} alt="Down" />
+                                <Image src={Down} alt="Down" width={11} height={6} />
                             </div>
                         </div>
                         <div className={tstyles.hsharing}>
                             <div className={tstyles.htsharing}>Profit <br /> Sharing <br /> Rate</div>
                             <div className={tstyles.image}>
-                                <Image src={Down} alt="Down" />
+                                <Image src={Down} alt="Down" width={11} height={6} />
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ const Pagination = ({ data, rowsPerPage }) => {
                             <div className={tstyles.tr} key={index}>
                                 <div className={tstyles.assets}>
                                     <div className={tstyles.image}>
-                                        <Image src={DAI} alt="DAI" />
+                                        <Image src={DAI} alt="DAI" width={36} height={36} />
                                     </div>
                                     <div className={tstyles.title}>{item.assets}</div>
                                 </div>
@@ -94,27 +94,27 @@ const Pagination = ({ data, rowsPerPage }) => {
                     {/* <TableFooter range={range} slice={slice} setPage={setPage} page={page} /> */}
                     <div className={pstyles.normal}>1</div>
                     <div className={pstyles.divide}>
-                        <Image src={Divide} alt="Divide" />
+                        <Image src={Divide} alt="Divide" width={1} height={36} />
                     </div>
                     <div className={pstyles.normal}>2</div>
                     <div className={pstyles.divide}>
-                        <Image src={Divide} alt="Divide" />
+                        <Image src={Divide} alt="Divide" width={1} height={36} />
                     </div>
                     <div className={pstyles.normal}>3</div>
                     <div className={pstyles.divide}>
-                        <Image src={Divide} alt="Divide" />
+                        <Image src={Divide} alt="Divide" width={1} height={36} />
                     </div>
                     <div className={pstyles.normal}>4</div>
                     <div className={pstyles.divide}>
-                        <Image src={Divide} alt="Divide" />
+                        <Image src={Divide} alt="Divide" width={1} height={36} />
                     </div>
                     <div className={pstyles.normal}>5</div>
                     <div className={pstyles.divide}>
-                        <Image src={Divide} alt="Divide" />
+                        <Image src={Divide} alt="Divide" width={1} height={36} />
                     </div>
                     <div className={pstyles.normal}>...</div>
                     <div className={pstyles.divide}>
-                        <Image src={Divide} alt="Divide" />
+                        <Image src={Divide} alt="Divide" width={1} height={36} />
                     </div>
                     <div className={pstyles.normal}>12</div>
                     <div className={pstyles.next}>next</div>

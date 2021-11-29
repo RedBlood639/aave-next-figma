@@ -23,7 +23,7 @@ const PaginationPart = () => {
                     </div>
                     <div className={styles.right}>
                         <div className={styles.usd}>USD</div>
-                        <Image src={Divide} alt="Divide" />
+                        <Image src={Divide} alt="Divide" width={1} height={25.5} />
                         <div className={styles.native}>Native</div>
                     </div>
                 </div>
