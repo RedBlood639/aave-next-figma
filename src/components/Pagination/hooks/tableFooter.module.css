@@ -1,0 +1,37 @@
+.activeButton {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(65.4deg, #4e89fe 18.74%, #6ac7fc 88.33%);
+  padding: 21px 15.5px 19px 15.5px;
+  cursor: pointer;
+}
+
+.inactiveButton {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #353f68;
+  padding: 21px 15.5px 19px 15.5px;
+  cursor: pointer;
+}
+
+.activeButton:hover,
+.inactiveButton:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}

@@ -1,0 +1,92 @@
+.tablepagination {
+  background: #222b52;
+  padding-top: 100px;
+}
+.container {
+  width: 83%;
+  margin: auto;
+  padding-bottom: 84px;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 15.5px;
+}
+.thead {
+  display: flex;
+  padding: 13px 27px 0 27px;
+}
+.hassets,
+.hmarket,
+.htotal,
+.hcommission,
+.hsharing {
+  display: flex;
+  align-items: center;
+  grid-gap: 14px;
+  cursor: pointer;
+}
+.htassets,
+.htmarket,
+.httotal,
+.htcommission,
+.htsharing {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffff;
+}
+.hmarket,
+.htotal {
+  width: 16%;
+}
+.hcommission {
+  width: 18%;
+}
+.hassets,
+.hsharing {
+  width: 25%;
+}
+.tr {
+  background: #4e5984;
+  border-radius: 45px;
+  padding: 13px 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.tr:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.assets {
+  display: flex;
+  align-items: center;
+  grid-gap: 14px;
+}
+.title,
+.market,
+.total,
+.commission,
+.sharing {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.market,
+.total {
+  width: 16%;
+}
+.commission {
+  width: 18%;
+}
+.assets,
+.sharing {
+  width: 25%;
+}

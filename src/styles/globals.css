@@ -1,0 +1,31 @@
+body {
+  margin: 0 !important;
+}
+#nprogress {
+  pointer-events: "none";
+}
+#nprogress .bar {
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  background: dodgerblue;
+  box-shadow: 0 0 2px dodgerblue;
+  /* box-shadow: 0 0 2px ${get(theme, "colors.primary.regular")}; */
+}
+#nprogress .peg {
+  right: 0;
+  opacity: 1;
+  width: 100px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  transform: rotate(3deg) translate(0px, -4px);
+  box-shadow: 0 0 10px dodgerblue;
+  /* boxShadow: `0 0 10px ${get(
+    theme,
+    "colors.primary.regular"
+  )}, 0 0 5px ${get(theme, "colors.primary.regular")}`, */
+}
