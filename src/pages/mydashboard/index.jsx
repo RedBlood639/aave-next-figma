@@ -2,11 +2,11 @@ import React from 'react'
 
 import Image from 'next/image'
 
-import info from '../../assets/info.png'
-import DAI from '../../assets/dai.png'
-import deposit from '../../assets/deposit-diagram.png'
-import borrow from '../../assets/borrow-diagram.png'
-import collateral from '../../assets/collateral-diagram.png'
+// import info from '../../assets/info.png'
+// import DAI from '../../assets/dai.png'
+// import deposit from '../../assets/deposit-diagram.png'
+// import borrow from '../../assets/borrow-diagram.png'
+// import collateral from '../../assets/collateral-diagram.png'
 
 import styles from './mydashboard.module.css'
 
