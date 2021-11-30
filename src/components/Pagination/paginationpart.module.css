@@ -53,3 +53,19 @@
   color: #3881d8;
   cursor: pointer;
 }
+@media screen and (max-width: 488px) {
+  .totalsize {
+    font-size: 14px;
+  }
+  .totaltitle,
+  .usd,
+  .native {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}

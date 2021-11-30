@@ -7,7 +7,7 @@
   width: 83%;
   margin: auto;
   display: flex;
-  grid-gap: 60px;
+  grid-gap: 1px 60px;
 }
 .container {
   width: 83%;
@@ -41,11 +41,9 @@
   background: #222b52;
 }
 .modal {
-  margin-top: -10px;
   background: #353f68;
   box-shadow: 0px 0px 15px rgba(21, 28, 61, 0.25);
   border-radius: 15px;
-  width: 100%;
   padding: 19px 27px 17px 27px;
 }
 .modaltitle {
@@ -65,15 +63,15 @@
 .modalcontent {
   display: flex;
   justify-content: space-between;
-  grid-gap: 150px;
-  padding-bottom: 160px;
 }
 .mgroup1 {
   display: flex;
-  grid-gap: 135px;
+  width: 35%;
+  grid-gap: 130px;
 }
 .mgroup2 {
   display: flex;
+  width: 40%;
   grid-gap: 81px;
 }
 .mgroup3 {
@@ -104,8 +102,8 @@
   padding-top: 72px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 500px;
   margin: auto;
 }
 .dtitle {
@@ -128,8 +126,8 @@
 }
 .labels {
   display: flex;
+  grid-gap: 120px;
   padding: 45px 20px 5px 20px;
-  grid-gap: 238px;
 }
 .label {
   font-family: Poppins;
@@ -167,7 +165,7 @@
   border: none;
   outline: none;
   color: white;
-  width: 200%;
+  width: 100%;
 }
 .slidercontainer {
   width: 100%;
@@ -244,4 +242,97 @@
   line-height: 21px;
   color: #ffffff;
   cursor: pointer;
+}
+@media screen and (max-width: 1152px) {
+  .mgroup1 {
+    grid-gap: 70px;
+  }
+}
+@media screen and (max-width: 1122px) {
+  .container1 {
+    display: flex;
+    align-items: center;
+  }
+  .title {
+    font-size: 12px;
+  }
+  .amount {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .container1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .modalcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mgroup1 {
+    display: flex;
+    width: 80%;
+    grid-gap: 131px;
+  }
+  .mgroup2 {
+    display: flex;
+    width: 80%;
+    grid-gap: 81px;
+  }
+  .mgroup3 {
+    display: flex;
+    width: 80%;
+    grid-gap: 46px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .modaltitle {
+    font-size: 10px;
+  }
+  .hideminimize {
+    display: none;
+  }
+  .price,
+  .yes {
+    font-size: 10px;
+  }
+  .mgroup1 {
+    display: flex;
+    width: 100%;
+    grid-gap: 111px;
+  }
+  .mgroup2 {
+    display: flex;
+    width: 100%;
+    grid-gap: 81px;
+  }
+  .mgroup3 {
+    display: flex;
+    width: 100%;
+    grid-gap: 61px;
+  }
+}
+@media screen and (max-width: 466px) {
+  .dtitle {
+    font-size: 16px;
+  }
+  .dcontent {
+    font-size: 11px;
+  }
+  .values {
+    padding: 16px 34px 13px 35px;
+  }
+  .labels {
+    display: flex;
+    grid-gap: 80px;
+  }
+  .label {
+    font-size: 10px;
+  }
+  .max {
+    width: 16%;
+  }
 }

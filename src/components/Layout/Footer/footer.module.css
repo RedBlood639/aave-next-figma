@@ -7,14 +7,13 @@
   width: 83%;
   margin: auto;
   display: flex;
-  grid-gap: 120px;
+  justify-content: space-between;
+  grid-gap: 50px 120px;
 }
 .image {
   display: flex;
   flex-direction: column;
   grid-gap: 65px;
-  margin-left: 0;
-  margin-right: auto;
   cursor: pointer;
 }
 .social {
@@ -53,6 +52,13 @@
   background: linear-gradient(100.97deg, #00345e 1.34%, #588aaf 95.15%);
 }
 
+.sctotal {
+  display: flex;
+  grid-gap: 15px 100px;
+}
+.logo {
+  width: 220px;
+}
 @media screen and (max-width: 1258px) {
   .title {
     font-weight: bold;
@@ -60,9 +66,40 @@
   }
   .content {
     display: flex;
-    grid-gap: 48px;
+    grid-gap: 1px 48px;
     font-family: Poppins;
     font-size: 16px;
     color: #d0d5eb;
+  }
+}
+@media screen and (max-width: 1178px) {
+  .sctotal {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 830px) {
+  .title {
+    font-size: 18px;
+  }
+  .content {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .context {
+    display: flex;
+    grid-gap: 52px;
   }
 }

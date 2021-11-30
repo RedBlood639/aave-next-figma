@@ -38,8 +38,8 @@ const CDeposit = () => {
                     </div>
                     <div className={styles.table}>
                         <div className={styles.tableheader}>
-                            <div className={styles.normal}>Asset</div>
-                            <div className={styles.normal}>Your wallet balance</div>
+                            <div className={styles.hasset}>Asset</div>
+                            <div className={styles.integrate1}>Your wallet balance</div>
                             <div className={styles.integrate}>
                                 <div className={styles.normal}>Profit Sharing Rate</div>
                                 <div className={styles.normal}>

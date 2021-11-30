@@ -45,3 +45,34 @@
   padding: 1px;
   background: linear-gradient(100.97deg, #00345e 1.34%, #588aaf 95.15%);
 }
+.input {
+  background: #353f68;
+  display: none;
+}
+.pageinput {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 38px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
+@media screen and (max-width: 618px) {
+  .normal,
+  .divide {
+    display: none;
+  }
+  .input {
+    display: inline-block;
+  }
+}

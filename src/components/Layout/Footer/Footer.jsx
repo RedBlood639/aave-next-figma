@@ -44,21 +44,23 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.stats}>
-                            <div className={styles.title}>Stats</div>
-                            <div className={styles.content}>
-                                <div className={styles.lcontent}>
-                                    <div className={styles.resources}>Rankings</div>
-                                    <div className={styles.helpcenter}>Activity</div>
+                        <div className={styles.sctotal}>
+                            <div className={styles.stats}>
+                                <div className={styles.title}>Stats</div>
+                                <div className={styles.content}>
+                                    <div className={styles.lcontent}>
+                                        <div className={styles.resources}>Rankings</div>
+                                        <div className={styles.helpcenter}>Activity</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className={styles.company}>
-                            <div className={styles.title}>Company</div>
-                            <div className={styles.content}>
-                                <div className={styles.lcontent}>
-                                    <div className={styles.resources}>About</div>
-                                    <div className={styles.helpcenter}>Careers</div>
+                            <div className={styles.company}>
+                                <div className={styles.title}>Company</div>
+                                <div className={styles.content}>
+                                    <div className={styles.lcontent}>
+                                        <div className={styles.resources}>About</div>
+                                        <div className={styles.helpcenter}>Careers</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -10,8 +10,12 @@
   justify-content: space-between;
   transition: 0.4s;
 }
-.logo,
-.divide {
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logos {
   cursor: pointer;
 }
 .menu {
@@ -54,6 +58,10 @@
 .active {
   color: rgba(135, 212, 255, 1);
 }
+.logos {
+  width: 220px;
+}
+
 @media screen and (max-width: 1204px) {
   .menubar {
     font-weight: 300;
@@ -65,9 +73,92 @@
     display: flex;
     flex-direction: column;
   }
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
-/* @media screen and (max-width: 780px) {
+.menuicon {
+  display: none;
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width: 780px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
   .menu {
     display: none;
   }
-} */
+  .menuicon {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 380px) {
+  .logos {
+    width: 180px;
+  }
+}
+
+/* menu */
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlaycontent {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay div {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay div:hover,
+.overlay div:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    overflow-y: auto;
+  }
+  .overlay div {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+.openNav {
+  height: 100%;
+}

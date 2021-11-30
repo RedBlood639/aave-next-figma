@@ -38,7 +38,7 @@ const CBorrow = () => {
                     </div>
                     <div className={styles.table}>
                         <div className={styles.tableheader}>
-                            <div className={styles.normal}>Asset</div>
+                            <div className={styles.hasset}>Asset</div>
                             <div className={styles.integrate1}>
                                 <div className={styles.opacity}>
                                     (Based  on your collateral)
@@ -65,9 +65,7 @@ const CBorrow = () => {
                                             </div>
                                             <div className={styles.title}>{item.assets}</div>
                                         </div>
-                                        <div className={styles.ballance}>
-                                            <div className={styles.ballance1}>{item.borrow}</div>
-                                        </div>
+                                        <div className={styles.ballance}>{item.borrow}</div>
                                         <div className={styles.rate}>{item.commission}</div>
                                     </div>
                                 ))

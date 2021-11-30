@@ -44,7 +44,7 @@ const Borrow = () => {
                             <div>Borrow DAI</div>
                             <div className={styles.minimize}>
                                 <div>
-                                    <Image src={SmallD} alt="DField" width={7} height={14} />
+                                    <Image src={SmallD} alt="DField" width={19} height={19} />
                                 </div>
                                 <div>DAI Reserve Overview</div>
                             </div>
@@ -52,7 +52,7 @@ const Borrow = () => {
                                 <div>
                                     <Image src={Minimize} alt="Minimize" width={19} height={19} />
                                 </div>
-                                <div>Minimize</div>
+                                <div className={styles.hideminimize}>Minimize</div>
                             </div>
                         </div>
                         <div className={styles.modalborder}></div>
@@ -71,58 +71,58 @@ const Borrow = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className={styles.borrow}>
-                    <div className={styles.dtitle}>
-                        How much would you like to borrow?
-                    </div>
-                    <div className={styles.dcontent}>
-                        Please enter an amount you would like to borrow.
-                        <br />
-                        The maximum amount you can borrow is shown below.
-                    </div>
-                    <div className={styles.labels}>
-                        <div className={styles.label}>Available to borrow</div>
-                        <div className={styles.label}>
-                            <b>38.17984</b> DAI
+                    <div className={styles.borrow}>
+                        <div className={styles.dtitle}>
+                            How much would you like to borrow?
                         </div>
-                    </div>
-                    <div className={styles.values}>
-                        <div className={styles.left}>
-                            <div>
-                                <Image src={BigD} alt="DField" width={29.3} height={29.3} />
-                            </div>
-                            <div className={styles.dinput}>
-                                <input
-                                    type="text"
-                                    className={styles.input}
-                                    value={dai}
-                                    onChange={(e) => setDAI(e.target.value)}
-                                />
+                        <div className={styles.dcontent}>
+                            Please enter an amount you would like to borrow.
+                            <br />
+                            The maximum amount you can borrow is shown below.
+                        </div>
+                        <div className={styles.labels}>
+                            <div className={styles.label}>Available to borrow</div>
+                            <div className={styles.label}>
+                                <b>38.17984</b> DAI
                             </div>
                         </div>
-                        <div className={styles.max}>Max</div>
-                    </div>
-                    <div className={styles.slidercontainer}>
-                        <div className={styles.sliderlabels}>
-                            <div className={styles.safer}>Safer</div>
-                            <div className={styles.ghost}>New health factor 2.04</div>
-                            <div className={styles.risker}>Risker</div>
+                        <div className={styles.values}>
+                            <div className={styles.left}>
+                                <div>
+                                    <Image src={BigD} alt="DField" width={29.3} height={29.3} />
+                                </div>
+                                <div className={styles.dinput}>
+                                    <input
+                                        type="text"
+                                        className={styles.input}
+                                        value={dai}
+                                        onChange={(e) => setDAI(e.target.value)}
+                                    />
+                                </div>
+                            </div>
+                            <div className={styles.max}>Max</div>
                         </div>
-                        <input
-                            type="range"
-                            in="1"
-                            max="100"
-                            className={styles.slider}
-                            onChange={(e) => setDAI(e.target.value)}
-                            value={dai}
-                        />
-                    </div>
-                    <div
-                        className={styles.continue}
-                        onClick={() => router.push("/continue/cborrow")}
-                    >
-                        Continue
+                        <div className={styles.slidercontainer}>
+                            <div className={styles.sliderlabels}>
+                                <div className={styles.safer}>Safer</div>
+                                <div className={styles.ghost}>New health factor 2.04</div>
+                                <div className={styles.risker}>Risker</div>
+                            </div>
+                            <input
+                                type="range"
+                                in="1"
+                                max="100"
+                                className={styles.slider}
+                                onChange={(e) => setDAI(e.target.value)}
+                                value={dai}
+                            />
+                        </div>
+                        <div
+                            className={styles.continue}
+                            onClick={() => router.push("/continue/cborrow")}
+                        >
+                            Continue
+                        </div>
                     </div>
                 </div>
             </div>

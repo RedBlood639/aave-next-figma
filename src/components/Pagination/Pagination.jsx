@@ -54,24 +54,6 @@ const Pagination = ({ data, rowsPerPage }) => {
                     </div>
                     {/* table body */}
                     {
-                        // url.map(
-                        //     (item, index) => {
-                        //         return (
-                        //             <div className={tstyles.tr} key={index}>
-                        //                 <div className={tstyles.assets}>
-                        //                     <div className={tstyles.image}>
-                        //                         <Image src={DAI} alt="DAI" />
-                        //                     </div>
-                        //                     <div className={tstyles.title}>{item.assets}</div>
-                        //                 </div>
-                        //                 <div className={tstyles.market}>{item.size}</div>
-                        //                 <div className={tstyles.total}>{item.total}</div>
-                        //                 <div className={tstyles.commission}>{item.commission}</div>
-                        //                 <div className={tstyles.sharing}>{item.sharing}</div>
-                        //             </div>
-                        //         )
-                        //     }
-                        // )
                         slice.map((item, index) => (
                             <div className={tstyles.tr} key={index}>
                                 <div className={tstyles.assets}>
@@ -91,6 +73,9 @@ const Pagination = ({ data, rowsPerPage }) => {
                 </div>
                 <div className={pstyles.pagination}>
                     <div className={pstyles.previous}>previous</div>
+                    <div className={pstyles.input}>
+                        <input type="text" className={pstyles.pageinput} />
+                    </div>
                     {/* <TableFooter range={range} slice={slice} setPage={setPage} page={page} /> */}
                     <div className={pstyles.normal}>1</div>
                     <div className={pstyles.divide}>

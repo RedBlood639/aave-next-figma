@@ -33,7 +33,9 @@
   grid-gap: 17px;
 }
 .normal,
-.normalblue {
+.normalblue,
+.hasset,
+.integrate1 {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
@@ -66,6 +68,7 @@
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
+  opacity: 0.3;
   width: 100%;
 }
 .searchinput::placeholder {
@@ -80,12 +83,13 @@
   padding: 21px;
   display: flex;
   align-items: center;
-  grid-gap: 162px;
 }
 .integrate {
+  width: 120px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  grid-gap: 8px;
+  grid-gap: 6px;
 }
 .integrate1 {
   display: flex;
@@ -130,7 +134,6 @@
   background: #353f68;
   padding: 13px 20px;
   display: flex;
-
   align-items: center;
   cursor: pointer;
   border-bottom: 1px solid #161e3f;
@@ -154,16 +157,24 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
+  text-align: center;
   color: #ffffff;
 }
-.assets {
-  width: 27%;
+
+.rate {
+  width: 100px;
 }
+
+.hasset,
+.assets {
+  width: 100px;
+}
+.integrate1,
 .ballance {
   width: 35%;
 }
 .resultmodal {
-  width: 30%;
+  width: 40%;
 }
 .resultmodalheader {
   background: #4e5984;
@@ -187,4 +198,31 @@
 }
 .resultmodalfooter {
   padding-top: 14px;
+}
+@media screen and (max-width: 1186px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .listmodal {
+    width: 100%;
+  }
+  .resultmodal {
+    width: 50%;
+  }
+  .title,
+  .ballance,
+  .rate {
+    font-size: 12px;
+  }
+  .normal,
+  .hasset,
+  .integrate1 {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 666px) {
+  .resultmodal {
+    width: 90%;
+  }
 }
