@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 import ProgressBar from "progressbar.js";
@@ -10,6 +10,9 @@ import Info from "../../assets/info.png";
 import DAI from "../../assets/dai.png";
 
 const MyDashboard = () => {
+    const [check, setCheck] = useState(true);
+    const [check1, setCheck1] = useState(true);
+
     useEffect(() => {
         var bar = new ProgressBar.Circle(container, {
             text: {
@@ -79,7 +82,7 @@ const MyDashboard = () => {
         bar2.text.style.textAlign = "center";
         bar2.text.style.color = "#4E5984";
         bar2.animate(0.4); // Number from 0.0 to 1.0
-    });
+    }, []);
     return (
         <div className={styles.mydashboard}>
             <div className={styles.container}>
@@ -123,7 +126,16 @@ const MyDashboard = () => {
                                 </div>
                                 <div className={styles.bprofit}>4.04%</div>
                                 <div className={styles.bmerge}>
-                                    Yes
+                                    <label className={styles.yes}>
+                                        {!check1 ? "Yes" : ""}
+                                    </label>
+                                    <label className={styles.no}>
+                                        {!check1 ? "" : "No"}
+                                    </label>
+                                    <label className={styles.switch}>
+                                        <input type="checkbox" onChange={() => setCheck1(!check1)} />
+                                        <span className={`${styles.slider} ${styles.round}`}></span>
+                                    </label>
                                 </div>
                                 <div className={styles.bspace}>
                                     <div className={styles.deposit}>Deposit</div>
@@ -141,7 +153,16 @@ const MyDashboard = () => {
                                 </div>
                                 <div className={styles.bprofit}>4.04%</div>
                                 <div className={styles.bmerge}>
-                                    Yes
+                                    <label className={styles.yes}>
+                                        {!check ? "Yes" : ""}
+                                    </label>
+                                    <label className={styles.no}>
+                                        {!check ? "" : "No"}
+                                    </label>
+                                    <label className={styles.switch}>
+                                        <input type="checkbox" onChange={() => setCheck(!check)} />
+                                        <span className={`${styles.slider} ${styles.round}`}></span>
+                                    </label>
                                 </div>
                                 <div className={styles.bspace}>
                                     <div className={styles.deposit}>Deposit</div>
