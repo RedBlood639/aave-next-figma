@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router"
 
 import ProgressBar from "progressbar.js";
 
@@ -10,6 +11,8 @@ import Info from "../../assets/info.png";
 import DAI from "../../assets/dai.png";
 
 const MyDashboard = () => {
+    const router = useRouter();
+
     const [check, setCheck] = useState(true);
     const [check1, setCheck1] = useState(true);
 
@@ -51,7 +54,7 @@ const MyDashboard = () => {
             // Set default step function for all animate calls
             step: function (state, circle) {
                 circle.path.setAttribute("stroke", state.color);
-                circle.setText("Deposit <br /> composition");
+                circle.setText("Borrow <br /> composition");
             },
         });
         bar1.text.style.fontFamily = "Poppins";
@@ -74,7 +77,7 @@ const MyDashboard = () => {
             // Set default step function for all animate calls
             step: function (state, circle) {
                 circle.path.setAttribute("stroke", state.color);
-                circle.setText("Deposit <br /> composition");
+                circle.setText("Collateral <br /> composition");
             },
         });
         bar2.text.style.fontFamily = "Poppins";
@@ -139,7 +142,7 @@ const MyDashboard = () => {
                                 </div>
                                 <div className={styles.bspace}>
                                     <div className={styles.deposit}>Deposit</div>
-                                    <div className={styles.withdraw}>Withdraw</div>
+                                    <div className={styles.withdraw} onClick={() => router.push('/withdraw')}>Withdraw</div>
                                 </div>
                             </div>
                             <div className={styles.child}>
@@ -166,7 +169,7 @@ const MyDashboard = () => {
                                 </div>
                                 <div className={styles.bspace}>
                                     <div className={styles.deposit}>Deposit</div>
-                                    <div className={styles.withdraw}>Withdraw</div>
+                                    <div className={styles.withdraw} onClick={() => router.push('/withdraw')}>Withdraw</div>
                                 </div>
                             </div>
                         </div>
@@ -206,9 +209,9 @@ const MyDashboard = () => {
                     </div>
                     <div className={styles.table}>
                         <div className={styles.thead}>
-                            <div className={styles.deposits}>Your <br /> deposits</div>
-                            <div className={styles.ballance} >Current <br /> ballance</div>
-                            <div className={styles.profit}>Profit <br /> Sharing <br /> Rate</div>
+                            <div className={styles.deposits}>Your <br /> borrows</div>
+                            <div className={styles.ballance} >Borrowed</div>
+                            <div className={styles.profit}>Profit <br /> Commission <br /> Rate</div>
                             <div className={styles.merge}></div>
                             <div className={styles.bspace}></div>
                         </div>
@@ -225,8 +228,8 @@ const MyDashboard = () => {
                                 <div className={styles.bprofit}>4.04%</div>
                                 <div className={styles.bmerge}></div>
                                 <div className={styles.bspace}>
-                                    <div className={styles.deposit}>Deposit</div>
-                                    <div className={styles.withdraw}>Withdraw</div>
+                                    <div className={styles.deposit}>Borrow</div>
+                                    <div className={styles.withdraw} onClick={() => router.push('/repay')}>Repay</div>
                                 </div>
                             </div>
                             <div className={styles.child}>
@@ -242,7 +245,7 @@ const MyDashboard = () => {
                                 <div className={styles.bmerge}></div>
                                 <div className={styles.bspace}>
                                     <div className={styles.deposit}>Deposit</div>
-                                    <div className={styles.withdraw}>Withdraw</div>
+                                    <div className={styles.withdraw} onClick={() => router.push('/repay')}>Withdraw</div>
                                 </div>
                             </div>
                         </div>

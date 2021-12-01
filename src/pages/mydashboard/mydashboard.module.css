@@ -163,7 +163,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #161e3f;
 }
 .thead div {
   padding: 10px;
