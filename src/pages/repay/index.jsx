@@ -30,7 +30,16 @@ const Repay = () => {
             <div className={styles.modalcontent}>
               <div className={styles.mgroup1}>
                 <div className={styles.row1}>
-                  <div className={styles.price}>Your balance Properity</div>
+                  <div className={styles.price}>You borrowed</div>
+                  <div className={styles.price}>
+                    <div>
+                      <b>10.0003</b> DAI
+                    </div>
+                    <div className={styles.underdollar}>$20.04</div>
+                  </div>
+                </div>
+                <div className={styles.row1}>
+                  <div className={styles.price}>Wallet ballance</div>
                   <div className={styles.price}>
                     <div>
                       <b>10.0003</b> DAI
@@ -38,18 +47,32 @@ const Repay = () => {
                     <div className={styles.underdollar}>$40.04</div>
                   </div>
                 </div>
+              </div>
+              <div className={styles.mgroup1}>
+                <div className={styles.row1}>
+                  <div className={styles.price}>You borrowed</div>
+                  <div className={styles.price}>
+                    <div className={styles.onlyright}>
+                      <b>85.93</b> USD
+                    </div>
+                    <div className={styles.underdollar}>0.01267836482546235 ETH</div>
+                  </div>
+                </div>
                 <div className={styles.row2}>
+                  <div className={styles.price}>Collateral composition</div>
+                  <div className={styles.progress}>
+                    <div className={styles.marklineprogress}></div>
+                    <div className={styles.lineprogress}></div>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.mgroup2}>
+                <div className={styles.row3}>
                   <div className={styles.add}>
                     <div className={styles.price}>Loan to value</div>
                     <Image src={Info} alt="Info" width={20} height={20} />
                   </div>
-                  <div className={styles.price}><b>78.99</b>%</div>
-                </div>
-              </div>
-              <div className={styles.mgroup2}>
-                <div className={styles.price}>Collateral composition</div>
-                <div className={styles.lineprogress}>
-
+                  <div className={styles.price}><b>77.64</b>%</div>
                 </div>
               </div>
             </div>
