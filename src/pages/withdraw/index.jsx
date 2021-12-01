@@ -28,23 +28,21 @@ const WithDraw = () => {
             </div>
             <div className={styles.modalborder}></div>
             <div className={styles.modalcontent}>
-              <div className={styles.mgroup1}>
-                <div className={styles.row1}>
-                  <div className={styles.price}>Your balance Properity</div>
-                  <div className={styles.price}>
-                    <div>
-                      <b>10.0003</b> DAI
-                    </div>
-                    <div className={styles.underdollar}>$40.04</div>
+              <div className={styles.row1}>
+                <div className={styles.price}>Your balance Properity</div>
+                <div className={styles.price}>
+                  <div>
+                    <b>10.0003</b> DAI
                   </div>
+                  <div className={styles.underdollar}>$40.04</div>
                 </div>
-                <div className={styles.row2}>
-                  <div className={styles.add}>
-                    <div className={styles.price}>Loan to value</div>
-                    <Image src={Info} alt="Info" width={20} height={20} />
-                  </div>
-                  <div className={styles.price}><b>78.99</b>%</div>
+              </div>
+              <div className={styles.row2}>
+                <div className={styles.add}>
+                  <div className={styles.price}>Loan to value</div>
+                  <Image src={Info} alt="Info" width={20} height={20} />
                 </div>
+                <div className={styles.price}><b>78.99</b>%</div>
               </div>
               <div className={styles.mgroup2}>
                 <div className={styles.price}>Collateral composition</div>
