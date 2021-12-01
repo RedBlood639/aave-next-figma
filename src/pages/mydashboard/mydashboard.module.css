@@ -205,6 +205,7 @@
   color: #ffffff;
   padding: 4px 18px;
   width: 50%;
+  cursor: pointer;
 }
 .withdraw {
   border-radius: 24.6479px;
@@ -218,6 +219,7 @@
   text-align: center;
   padding: 4px 18px;
   width: 50%;
+  cursor: pointer;
 }
 .bspace {
   display: flex;

@@ -245,7 +245,7 @@ const MyDashboard = () => {
                                 <div className={styles.bmerge}></div>
                                 <div className={styles.bspace}>
                                     <div className={styles.deposit}>Deposit</div>
-                                    <div className={styles.withdraw} onClick={() => router.push('/repay')}>Withdraw</div>
+                                    <div className={styles.withdraw} onClick={() => router.push('/repay')}>Repay</div>
                                 </div>
                             </div>
                         </div>
