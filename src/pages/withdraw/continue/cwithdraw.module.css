@@ -59,7 +59,7 @@
   grid-gap: 15px;
 }
 .row2 {
-  align-items: center;
+  align-items: flex-start !important;
 }
 .underdollar {
   text-align: right;
