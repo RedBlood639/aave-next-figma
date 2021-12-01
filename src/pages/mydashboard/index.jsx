@@ -1,173 +1,143 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import Image from "next/image";
 
-import Image from 'next/image'
+import ProgressBar from "progressbar.js";
 
-// import info from '../../assets/info.png'
-// import DAI from '../../assets/dai.png'
-// import deposit from '../../assets/deposit-diagram.png'
-// import borrow from '../../assets/borrow-diagram.png'
-// import collateral from '../../assets/collateral-diagram.png'
+import styles from "./mydashboard.module.css";
 
-import styles from './mydashboard.module.css'
+import Minimize from "../../assets/minimize.png";
+import Info from "../../assets/info.png";
+import DAI from "../../assets/dai.png";
+import { textAlign } from "@mui/system";
 
 const MyDashboard = () => {
+    useEffect(() => {
+        var bar = new ProgressBar.Circle(container, {
+            text: {
+                autoStyleContainer: false,
+            },
+            trailColor: "#4e5984",
+            trailWidth: 10,
+            duration: 1800,
+            easing: "bounce",
+            strokeWidth: 10,
+            from: { color: "#FFEA82", a: 0 },
+            to: { color: "#EF967A 100% #FCFE99 100%", a: 0.4 },
+            // Set default step function for all animate calls
+            step: function (state, circle) {
+                circle.path.setAttribute("stroke", state.color);
+                circle.setText("Deposit <br /> composition");
+            },
+        });
+        bar.text.style.fontFamily = "Poppins";
+        bar.text.style.fontSize = "10.5px";
+        bar.text.style.textAlign = "center";
+        bar.text.style.color = "#4E5984";
+        bar.animate(0.4); // Number from 0.0 to 1.0
+
+        var bar1 = new ProgressBar.Circle(container1, {
+            text: {
+                autoStyleContainer: false,
+            },
+            trailColor: "#4e5984",
+            trailWidth: 10,
+            duration: 1800,
+            easing: "bounce",
+            strokeWidth: 10,
+            from: { color: "#FFEA82", a: 0 },
+            to: { color: "#EF967A 100% #FCFE99 100%", a: 0.4 },
+            // Set default step function for all animate calls
+            step: function (state, circle) {
+                circle.path.setAttribute("stroke", state.color);
+                circle.setText("Deposit <br /> composition");
+            },
+        });
+        bar1.text.style.fontFamily = "Poppins";
+        bar1.text.style.fontSize = "10.5px";
+        bar1.text.style.textAlign = "center";
+        bar1.text.style.color = "#4E5984";
+        bar1.animate(0.4); // Number from 0.0 to 1.0
+
+        var bar2 = new ProgressBar.Circle(container2, {
+            text: {
+                autoStyleContainer: false,
+            },
+            trailColor: "#4e5984",
+            trailWidth: 10,
+            duration: 1800,
+            easing: "bounce",
+            strokeWidth: 10,
+            from: { color: "#FFEA82", a: 0 },
+            to: { color: "#EF967A 100% #FCFE99 100%", a: 0.4 },
+            // Set default step function for all animate calls
+            step: function (state, circle) {
+                circle.path.setAttribute("stroke", state.color);
+                circle.setText("Deposit <br /> composition");
+            },
+        });
+        bar2.text.style.fontFamily = "Poppins";
+        bar2.text.style.fontSize = "10.5px";
+        bar2.text.style.textAlign = "center";
+        bar2.text.style.color = "#4E5984";
+        bar2.animate(0.4); // Number from 0.0 to 1.0
+    });
     return (
-        <div></div>
-    )
-    // const data1 = [
-    //     {
-    //         "id": "1",
-    //         "ballance1": "9, 990.00",
-    //         "ballance2": "$10,088.77",
-    //         "rate": "4.04%"
-    //     },
-    //     {
-    //         "id": "2",
-    //         "ballance1": "9, 990.00",
-    //         "ballance2": "$10,088.77",
-    //         "rate": "4.04%"
-    //     }
-    // ];
-    // const data2 = [
-    //     {
-    //         "id": "1",
-    //         "borrowed1": "9, 990.00",
-    //         "borrowed2": "$10,088.77",
-    //         "rate": "4.04%"
-    //     },
-    //     {
-    //         "id": "2",
-    //         "borrowed1": "9, 990.00",
-    //         "borrowed2": "$10,088.77",
-    //         "rate": "4.04%"
-    //     }
-    // ];
-    // return (
-    //     <div className={styles.container}>
-    //         <div className={styles.card}>
-    //             <div className={styles.cardtitle}>Deposit information</div>
-    //             <div className={styles.cardcontent}>
-    //                 <div className={styles.chartpart}>
-    //                     <div className={styles.textgroup}>
-    //                         <div className={styles.texttitle}>
-    //                             <div >
-    //                                 Approximate balance
-    //                             </div>
-    //                             <Image src={info} alt="info" />
-    //                         </div>
-    //                         <div className={styles.textcontent}>
-    //                             <b>$ 3.05</b>50273922 USD
-    //                         </div>
-    //                     </div>
-    //                     <div className={styles.chartgroup}>
-    //                         <Image src={deposit} alt="deposit" />
-    //                     </div>
-    //                 </div>
-    //                 <table className={styles.table}>
-    //                     <th className={styles.tableheader}>
-    //                         <td className={styles.thdeposit}>Your<br />deposits</td>
-    //                         <td className={styles.thbalance}>Current<br />balance</td>
-    //                         <td className={styles.thrate}>Profit<br />Sharing<br />Rate</td>
-    //                         <td className={styles.thcollateral}>
-    //                             <div >
-    //                                 Collateral
-    //                             </div>
-    //                             <Image src={info} alt="info" />
-    //                         </td>
-    //                     </th>
-    //                     <div className={styles.tablecontent}>
-    //                         {
-    //                             data1.map((item, index) => (
-    //                                 <tr className={styles.tr} key={index}>
-    //                                     <td className={styles.deposit}>
-    //                                         <Image src={DAI} alt="DAI" />
-    //                                         <div className={styles.title}>DAI</div>
-    //                                     </td>
-    //                                     <td className={styles.ballance}>
-    //                                         <div className={styles.ballance1}>{item.ballance1}</div>
-    //                                         <div className={styles.ballance2}>{item.ballance2}</div>
-    //                                     </td>
-    //                                     <td className={styles.rate}>{item.rate}</td>
-    //                                     <td className={styles.collateral}>
-    //                                         <div className={styles.yes}>Yes</div>
-    //                                         <div className={styles.option}>
-    //                                             <label className={styles.switch}>
-    //                                                 <input type="checkbox" checked />
-    //                                                 <span className={`${styles.slider} ${styles.round}`}></span>
-    //                                             </label>
-    //                                         </div>
-    //                                     </td>
-    //                                     <td className={styles.btngroup}>
-    //                                         <div className={styles.depositbtn}>Deposit</div>
-    //                                         <div className={styles.withdrawbtn}>Withdraw</div>
-    //                                     </td>
-    //                                 </tr>
-    //                             ))
-    //                         }
-    //                     </div>
-    //                 </table>
-    //             </div>
-    //         </div>
+        <div className={styles.mydashboard}>
+            <div className={styles.container}>
+                <div className={styles.leftmodal}>
+                    <div className={styles.lheader}>Deposit information</div>
+                    <div className={styles.progress}>
+                        <div className={styles.ptitle}>
+                            <div className={styles.normal}>
+                                <div>Approximate balance</div>
+                                <Image src={Info} alt="Info" width={16} height={16} />
+                            </div>
+                            <div className={styles.normal}>
+                                <div>
+                                    $ <b>3.05</b>
+                                </div>
+                                <div className={styles.small}>50273922 USD</div>
+                            </div>
+                        </div>
+                        <div id="container" className={styles.progressbar}></div>
+                    </div>
 
-    //         <div className={styles.card}>
-    //             <div className={styles.cardtitle}>
-    //                 <div>Borrow information</div>
-    //                 <div className={styles.minimize}>
-    //                     <Image src={info} alt="info" />
-    //                     <div>Minimize</div>
-    //                 </div>
-    //             </div>
-    //             <div className={styles.cardcontent}>
-    //                 <div className={styles.chartpart}>
-    //                     <div className={styles.borrowedtextgroup}>
-    //                         <div className={styles.borrowedtext}>
-    //                             You borrowed<br />$ 19.79 USD
-    //                         </div>
-    //                         <div className={styles.borrowedtext}>
-    //                             You Borrowing Powed Used<br />34.05 %
-    //                         </div>
-    //                         <div className={styles.borrowedtext}>
-    //                             Your collateral<br />$ 79.79 USD
-    //                         </div>
-    //                         <div className={styles.detailsbtn}>Details</div>
-    //                     </div>
-    //                     <div className={styles.chartgroup}>
-    //                         <Image src={borrow} alt="borrow" />
-    //                         <Image src={collateral} alt="collateral" />
-    //                     </div>
-    //                 </div>
-    //                 <table className={styles.table}>
-    //                     <th className={styles.tableheader}>
-    //                         <td className={styles.thdeposit}>Your<br />deposits</td>
-    //                         <td className={styles.thborrowed}>Borrowed</td>
-    //                         <td className={styles.thborrowedrate}>Profit<br />Commission<br />Rate</td>
-    //                     </th>
-    //                     <div className={styles.tablecontent}>
-    //                         {
-    //                             data2.map((item, index) => (
-    //                                 <tr className={styles.tr} key={index}>
-    //                                     <td className={styles.deposit}>
-    //                                         <Image src={DAI} alt="DAI" />
-    //                                         <div className={styles.title}>DAI</div>
-    //                                     </td>
-    //                                     <td className={styles.borrowed}>
-    //                                         <div className={styles.borrowed1}>{item.borrowed1}</div>
-    //                                         <div className={styles.borrowed2}>{item.borrowed2}</div>
-    //                                     </td>
-    //                                     <td className={styles.borrowedrate}>{item.rate}</td>
-    //                                     <td className={styles.btngroup}>
-    //                                         <div className={styles.depositbtn}>Deposit</div>
-    //                                         <div className={styles.repaybtn}>Repay</div>
-    //                                     </td>
-    //                                 </tr>
-    //                             ))
-    //                         }
-    //                     </div>
-    //                 </table>
-    //             </div>
-    //         </div>
-    //     </div>
-    // )
-}
+                </div>
+                <div className={styles.rightmodal}>
+                    <div className={styles.rheader}>
+                        <div className={styles.title}>Borrow information</div>
+                        <div className={styles.minimize}>
+                            <Image src={Minimize} alt="Minimize" width={19} height={19} />
+                            <div className={styles.hideminimize}>Minimize</div>
+                        </div>
+                    </div>
+                    <div className={styles.progress}>
+                        <div className={styles.ptitle1}>
+                            <div className={styles.item1}>
+                                <div>You borrowed</div>
+                                <div>$ 19.79 USD</div>
+                            </div>
+                            <div className={styles.item2}>
+                                <div>Borrowing Powed Used</div>
+                                <div>34.05 %</div>
+                            </div>
+                            <div className={styles.item3}>
+                                <div>Your collateral</div>
+                                <div>$ 79.79 USD</div>
+                            </div>
+                            <div className={styles.item4}>
+                                <div className={styles.btn}>Details</div>
+                            </div>
+                        </div>
+                        <div className={styles.progressgroup}>
+                            <div id="container1" className={styles.progressbar}></div>
+                            <div id="container2" className={styles.progressbar}></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
-export default MyDashboard
+export default MyDashboard;

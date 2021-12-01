@@ -16,6 +16,7 @@
     "next": "12.0.4",
     "next-images": "^1.8.4",
     "nprogress": "^0.2.0",
+    "progressbar.js": "^1.1.0",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",

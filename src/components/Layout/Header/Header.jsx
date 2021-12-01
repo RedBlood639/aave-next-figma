@@ -12,7 +12,6 @@ import styles from "./header.module.css";
 // import images
 import Logo from "../../../assets/logo.png";
 import Divide from "../../../assets/divide.png";
-import { styled } from "@mui/system";
 
 const Header = () => {
     const [state, setState] = useState(false);
