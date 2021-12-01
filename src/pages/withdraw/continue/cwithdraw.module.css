@@ -46,11 +46,11 @@
 .modalcontent {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .mgroup1 {
   display: flex;
-  /* align-items: center; */
-  grid-gap: 30px;
+  justify-content: space-between;
 }
 .row1,
 .row2 {
