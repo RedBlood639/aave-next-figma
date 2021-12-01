@@ -8,7 +8,6 @@ import styles from "./mydashboard.module.css";
 import Minimize from "../../assets/minimize.png";
 import Info from "../../assets/info.png";
 import DAI from "../../assets/dai.png";
-import { textAlign } from "@mui/system";
 
 const MyDashboard = () => {
     useEffect(() => {
@@ -101,8 +100,58 @@ const MyDashboard = () => {
                         </div>
                         <div id="container" className={styles.progressbar}></div>
                     </div>
-
+                    <div className={styles.table}>
+                        <div className={styles.thead}>
+                            <div className={styles.deposits}>Your <br /> deposits</div>
+                            <div className={styles.ballance} >Current <br /> ballance</div>
+                            <div className={styles.profit}>Profit <br /> Sharing <br /> Rate</div>
+                            <div className={styles.merge}>
+                                <div>Collateral</div>
+                                <Image src={Info} alt="Info" width={18} height={18} />
+                            </div>
+                            <div className={styles.bspace}></div>
+                        </div>
+                        <div className={styles.tbody}>
+                            <div className={styles.child}>
+                                <div className={styles.bdeposits}>
+                                    <Image src={DAI} alt="DAI" width={30} height={30} />
+                                    <div>DAI</div>
+                                </div>
+                                <div className={styles.bballance}>
+                                    <div>9, 990.00</div>
+                                    <div className={styles.opacity}>$10,088.77</div>
+                                </div>
+                                <div className={styles.bprofit}>4.04%</div>
+                                <div className={styles.bmerge}>
+                                    Yes
+                                </div>
+                                <div className={styles.bspace}>
+                                    <div className={styles.deposit}>Deposit</div>
+                                    <div className={styles.withdraw}>Withdraw</div>
+                                </div>
+                            </div>
+                            <div className={styles.child}>
+                                <div className={styles.bdeposits}>
+                                    <Image src={DAI} alt="DAI" width={30} height={30} />
+                                    <div>DAI</div>
+                                </div>
+                                <div className={styles.bballance}>
+                                    <div>9, 990.00</div>
+                                    <div className={styles.opacity}>$10,088.77</div>
+                                </div>
+                                <div className={styles.bprofit}>4.04%</div>
+                                <div className={styles.bmerge}>
+                                    Yes
+                                </div>
+                                <div className={styles.bspace}>
+                                    <div className={styles.deposit}>Deposit</div>
+                                    <div className={styles.withdraw}>Withdraw</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                {/* right modal */}
                 <div className={styles.rightmodal}>
                     <div className={styles.rheader}>
                         <div className={styles.title}>Borrow information</div>
@@ -134,9 +183,52 @@ const MyDashboard = () => {
                             <div id="container2" className={styles.progressbar}></div>
                         </div>
                     </div>
+                    <div className={styles.table}>
+                        <div className={styles.thead}>
+                            <div className={styles.deposits}>Your <br /> deposits</div>
+                            <div className={styles.ballance} >Current <br /> ballance</div>
+                            <div className={styles.profit}>Profit <br /> Sharing <br /> Rate</div>
+                            <div className={styles.merge}></div>
+                            <div className={styles.bspace}></div>
+                        </div>
+                        <div className={styles.tbody}>
+                            <div className={styles.child}>
+                                <div className={styles.bdeposits}>
+                                    <Image src={DAI} alt="DAI" width={30} height={30} />
+                                    <div>DAI</div>
+                                </div>
+                                <div className={styles.bballance}>
+                                    <div>9, 990.00</div>
+                                    <div className={styles.opacity}>$10,088.77</div>
+                                </div>
+                                <div className={styles.bprofit}>4.04%</div>
+                                <div className={styles.bmerge}></div>
+                                <div className={styles.bspace}>
+                                    <div className={styles.deposit}>Deposit</div>
+                                    <div className={styles.withdraw}>Withdraw</div>
+                                </div>
+                            </div>
+                            <div className={styles.child}>
+                                <div className={styles.bdeposits}>
+                                    <Image src={DAI} alt="DAI" width={30} height={30} />
+                                    <div>DAI</div>
+                                </div>
+                                <div className={styles.bballance}>
+                                    <div>9, 990.00</div>
+                                    <div className={styles.opacity}>$10,088.77</div>
+                                </div>
+                                <div className={styles.bprofit}>4.04%</div>
+                                <div className={styles.bmerge}></div>
+                                <div className={styles.bspace}>
+                                    <div className={styles.deposit}>Deposit</div>
+                                    <div className={styles.withdraw}>Withdraw</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

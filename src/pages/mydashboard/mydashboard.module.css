@@ -107,49 +107,91 @@
 
 .table {
   width: 100%;
+  overflow-x: auto;
   /* border-spacing: 0; */
+}
+.table::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+.table::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+.table::-webkit-scrollbar-thumb {
+  opacity: 0.2;
+  border-radius: 30px;
+  background: #8996ca;
+}
+
+.table > * {
+  min-width: 580px;
+}
+.tbody {
+  padding-bottom: 25.5px;
+  border-radius: 0 0 15px 15px;
 }
 
 .thead {
+  display: flex;
+  align-items: center;
   background-color: #4e5984;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 15px;
   /* border-collapse: collapse; */
 }
 
 .tbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #353f68;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 15px;
   /* border-collapse: collapse; */
 }
-.thead th {
+.child {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid;
+}
+.thead div {
   padding: 10px;
   color: white;
-  text-align: left;
+  text-align: center;
   border: none;
 }
-
-.tbody td {
+.child div {
   padding: 10px;
   color: white;
-  text-align: left;
-  border-bottom: 1px solid #161e3f;
+  text-align: center;
+}
+.merge,
+.bdeposits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bdeposits {
+  text-align: left !important;
 }
 .opacity {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 15px;
-  text-align: center;
-  color: #4e5984;
+  color: #4e5984 !important;
 }
 .deposit {
   background: linear-gradient(65.4deg, #4e89fe 18.74%, #6ac7fc 88.33%);
@@ -162,10 +204,64 @@
   text-align: center;
   color: #ffffff;
   padding: 4px 18px;
-  margin-bottom: 5px;
+  width: 50%;
 }
-.only {
+.withdraw {
+  border-radius: 24.6479px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 13px;
+  color: #4e89fe !important;
+  border: 1px solid #4e89fe !important;
+  text-align: center;
+  padding: 4px 18px;
+  width: 50%;
+}
+.bspace {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  grid-gap: 5px;
+}
+.deposits {
+  text-align: left !important;
+}
+.deposits,
+.bdeposits {
+  width: 20%;
+}
+.ballance,
+.bballance,
+.profit,
+.bprofit {
+  width: 18%;
+}
+.merge,
+.bmerge {
+  width: 25%;
+}
+.space,
+.bspace {
+  width: 35%;
+}
+@media screen and (max-width: 1264px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftmodal,
+  .rightmodal {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .progress {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+  }
 }
