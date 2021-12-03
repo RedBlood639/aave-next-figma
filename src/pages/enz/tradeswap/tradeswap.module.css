@@ -1,0 +1,55 @@
+.tradeswap {
+  padding-top: 20px;
+  background-color: #222b52;
+}
+.container {
+  width: 83%;
+  margin: auto;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 27px;
+  border-radius: 15px;
+  background: #353f68;
+}
+.label {
+  display: flex;
+  justify-content: space-between;
+}
+.group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+.inputdev {
+  background: #4e5984;
+}
+.normal,
+.grey,
+.blue,
+.orange,
+.max {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.grey {
+  color: #9299b7;
+}
+.blue {
+  color: #4eb4fe;
+}
+.orange {
+  color: #ff5621;
+}
+.max {
+  padding: 2px 6px;
+  color: #222b52;
+  background: #4eb4fe;
+  border-radius: 8px;
+}

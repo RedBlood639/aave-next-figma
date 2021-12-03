@@ -5,7 +5,7 @@ import Image from 'next/image'
 import styles from './footer.module.css'
 
 // import images
-import Logo from '../../../assets/logo.png'
+import Logo from '../../../assets/logoblue.png'
 import Facebook from '../../../assets/facebook.png'
 import O from '../../../assets/o.png'
 import Twitter from '../../../assets/twitter.png'

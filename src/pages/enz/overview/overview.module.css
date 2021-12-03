@@ -1,0 +1,90 @@
+.overview {
+  padding-top: 30px;
+  background-color: #222b52;
+}
+.container {
+  width: 83%;
+  margin: auto;
+}
+.selects {
+  display: flex;
+  justify-content: space-between;
+}
+.mixlabelgroup {
+  display: flex;
+  grid-gap: 12px;
+}
+.sublabelgroup {
+  display: flex;
+  align-items: flex-end;
+  grid-gap: 14px;
+}
+.btngroup {
+  display: flex;
+  grid-gap: 13px;
+}
+.pricebtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #353f68;
+  border-radius: 45px;
+  padding: 14px 25px 17px 29px;
+  width: 315px;
+}
+.datebtn {
+  display: flex;
+  align-items: center;
+}
+.oneday {
+  background: #4e5984;
+  border-radius: 45px 0px 0px 45px;
+  padding: 16px 21px 19px 38px;
+  color: white;
+}
+.oneyear {
+  background: #4e5984;
+  border-radius: 0px 45px 45px 0px;
+  padding: 16px 38px 19px 21px;
+  color: white;
+}
+.oneweek,
+.onemonth,
+.threemonths,
+.sixmonths {
+  background: #353f68;
+  padding: 16px 18px 19px 21px;
+  color: white;
+}
+.bignormal {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+}
+.normal {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.smallnormal,
+.smallgreen,
+.smallgrey {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.smallgreen {
+  color: #35d387;
+}
+.smallgrey {
+  color: #4e5984;
+}

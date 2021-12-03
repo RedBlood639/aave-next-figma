@@ -7,33 +7,44 @@ import { useRouter } from "next/router";
 import { CgMenu } from "react-icons/cg";
 
 // import styles
-import styles from "./header.module.css";
+import styles from "./enzheader.module.css";
 
 // import images
 import Logo from "../../../assets/logo.png";
-import Divide from "../../../assets/divide.png";
 
-const Header = () => {
+const EnzHeader = () => {
 
     const router = useRouter();
     const [state, setState] = useState(false);
 
     const menuData = [
         {
-            title: "MY DASHBOARD",
-            path: "/mydashboard",
-        },
-        {
-            title: "MY FUND",
+            title: "OVERVIEW",
             path: "/enz/overview",
         },
         {
-            title: "DEPOSIT",
-            path: "/deposit",
+            title: "TRADE/SWAP",
+            path: "/enz/tradeswap",
         },
         {
-            title: "BORROW",
-            path: "/borrow",
+            title: "STAKE",
+            path: "/enz/stake",
+        },
+        {
+            title: "YIELD",
+            path: "/enz/yield",
+        },
+        {
+            title: "REWARDS",
+            path: "/enz/rewards",
+        },
+        {
+            title: "POLICIES",
+            path: "/enz/policies",
+        },
+        {
+            title: "SETTINGS",
+            path: "/enz/settings",
         },
     ];
 
@@ -98,16 +109,6 @@ const Header = () => {
                                 {item.title}
                             </div>
                         ))}
-                        <div className={styles.divide}>
-                            <Image src={Divide} alt="Divide" width={1} height={41} />
-                        </div>
-                        <div
-                            className={`${styles.menubar} ${router.route === "/addnetwork" && styles.active
-                                }`}
-                            onClick={() => router.push("/addnetwork")}
-                        >
-                            Add Network
-                        </div>
                     </div>
                 </div>
             </div>
@@ -115,4 +116,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default EnzHeader;
