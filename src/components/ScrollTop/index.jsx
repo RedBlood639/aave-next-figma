@@ -6,7 +6,6 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import { IoIosArrowUp } from "react-icons/io";
-import { theme } from "../../theme";
 
 /**
  * @define Styled-components
