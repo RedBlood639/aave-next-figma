@@ -36,17 +36,23 @@
   display: flex;
   align-items: center;
 }
+.datebtn > *:not(:last-child, :first-child) {
+  border-right: 1px solid #161e3f;
+}
 .oneday {
-  background: #4e5984;
+  background: #353f68;
   border-radius: 45px 0px 0px 45px;
   padding: 16px 21px 19px 38px;
   color: white;
 }
 .oneyear {
-  background: #4e5984;
+  background: #353f68;
   border-radius: 0px 45px 45px 0px;
   padding: 16px 38px 19px 21px;
   color: white;
+}
+.active {
+  background: #4e5984;
 }
 .oneweek,
 .onemonth,
@@ -56,7 +62,157 @@
   padding: 16px 18px 19px 21px;
   color: white;
 }
-.bignormal {
+.comment {
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 70px;
+}
+.card,
+.user,
+.diagram {
+  display: flex;
+  grid-gap: 26px;
+  background: #353f68;
+  border-radius: 15px;
+  padding: 16px 22px;
+}
+.chart {
+  padding-top: 63px;
+}
+.tablepart {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+  padding-top: 49px;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 14px;
+  background: #353f68;
+  border-radius: 15px;
+  padding: 27px 28px 19px 28px;
+}
+.thead,
+.tbody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.thead {
+  border-bottom: 1px solid #161e3f;
+  padding-bottom: 14px;
+}
+.nepre {
+  display: none;
+}
+.vault {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.simpletable {
+  padding-top: 32px;
+}
+.simplethead {
+  display: flex;
+}
+.tasset {
+  display: flex;
+  align-items: center;
+  grid-gap: 16px;
+}
+.asset,
+.tasset {
+  width: 25%;
+}
+.balance,
+.tbalance,
+.type,
+.ttype,
+.price,
+.tprice,
+.value,
+.tvalue {
+  width: 10%;
+}
+.daily,
+.tdaily {
+  width: 15%;
+}
+.allocation {
+  display: flex;
+  align-items: center;
+  grid-gap: 13px;
+}
+.allocation,
+.tallocation {
+  width: 20%;
+}
+.simplethead {
+  padding: 12px 0 13px 27px;
+}
+.simpletbody {
+  display: flex;
+  align-items: center;
+  background: #353f68;
+  border-radius: 45px;
+  padding: 12px 0 13px 27px;
+}
+.simplemix {
+  display: flex;
+  flex-direction: column;
+}
+.submenu {
+  display: flex;
+  grid-gap: 65px;
+  padding-top: 73px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #353f68;
+}
+.submenutable {
+  display: flex;
+  flex-direction: column;
+  margin-top: 31px;
+  background: #353f68;
+  border-radius: 15px;
+}
+.subtr {
+  display: flex;
+  align-items: center;
+  padding: 15px 12px 13px 28px;
+  border-bottom: 1px solid #161e3f;
+}
+.left {
+  width: 40%;
+}
+.right {
+  width: 60%;
+}
+.tablehide {
+  display: none;
+}
+.hide,
+.show {
+  width: 8.3%;
+  text-align: center;
+}
+.hover {
+  border-bottom: 3px solid #4e89fe;
+}
+.question {
+  display: flex;
+  align-items: center;
+  grid-gap: 11px;
+}
+.smartContract {
+  display: flex;
+  flex-direction: column;
+  padding: 62px 0 87px 0;
+}
+.bignormal,
+.bigorange {
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
@@ -64,7 +220,11 @@
   line-height: 36px;
   color: #ffffff;
 }
-.normal {
+.bigorange {
+  color: #ff5621;
+}
+.normal,
+.light {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
@@ -72,9 +232,13 @@
   line-height: 24px;
   color: #ffffff;
 }
+.light {
+  color: #9299b7;
+}
 .smallnormal,
 .smallgreen,
-.smallgrey {
+.smallgrey,
+.smalllight {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
@@ -85,6 +249,120 @@
 .smallgreen {
   color: #35d387;
 }
+.smallorange {
+  color: #ff5621;
+}
 .smallgrey {
   color: #4e5984;
+}
+.smalllight {
+  color: #7b87b6;
+}
+@media screen and (max-width: 1200px) {
+  .pricebtn {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 1116px) {
+  .btngroup {
+    display: flex;
+    flex-direction: column;
+  }
+  .comment {
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 868px) {
+  .submenu {
+    flex-wrap: wrap;
+    grid-gap: 30px;
+  }
+  .subtr {
+    grid-gap: 20px;
+  }
+  .right,
+  .left {
+    font-size: 11px;
+  }
+  .hide {
+    display: none;
+  }
+  .nepre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 50px;
+  }
+}
+@media screen and (max-width: 738px) {
+  .comment {
+    grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 722px) {
+  .selects {
+    flex-direction: column;
+    grid-gap: 10px;
+  }
+  .simpletable {
+    display: none;
+  }
+  .tablehide {
+    display: block;
+  }
+}
+@media screen and (max-width: 686px) {
+  .smallgrey,
+  .smallnormal,
+  .smallorange,
+  .smallgreen {
+    word-break: keep-all;
+  }
+  .smallnormal,
+  .smallorange,
+  .smallgreen {
+    font-size: 12px;
+  }
+  .smallgrey {
+    font-size: 12px;
+  }
+  .card,
+  .user,
+  .diagram {
+    grid-gap: 16px;
+  }
+}
+@media screen and (max-width: 492px) {
+  .pricebtn {
+    width: 220px;
+  }
+  .oneday {
+    background: #353f68;
+    border-radius: 45px 0px 0px 45px;
+    padding: 12px 10px 15px 24px;
+    color: white;
+    font-size: 10px;
+    word-break: keep-all;
+  }
+  .oneyear {
+    background: #353f68;
+    border-radius: 0px 45px 45px 0px;
+    padding: 12px 24px 15px 17px;
+    color: white;
+    font-size: 10px;
+    word-break: keep-all;
+  }
+  .active {
+    background: #4e5984;
+  }
+  .oneweek,
+  .onemonth,
+  .threemonths,
+  .sixmonths {
+    background: #353f68;
+    padding: 12px 12px 15px 15px;
+    color: white;
+    font-size: 10px;
+    word-break: keep-all;
+  }
 }

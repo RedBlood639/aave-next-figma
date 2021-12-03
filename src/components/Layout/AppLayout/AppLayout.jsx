@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import EnzHeader from '../EnzHeader'
+// import ScrollTop from '../../ScrollTop'
 
 const AppLayout = (props) => {
 
@@ -21,6 +22,7 @@ const AppLayout = (props) => {
         <>
             {flag ? (<EnzHeader />) : (<Header />)}
             {props.children}
+            {/* <ScrollTop /> */}
             <Footer />
         </>
     )
