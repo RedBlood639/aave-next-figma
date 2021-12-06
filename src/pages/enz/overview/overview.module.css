@@ -79,6 +79,13 @@
 }
 .chart {
   padding-top: 63px;
+  width: 100%;
+  /* height: 200px; */
+}
+
+.chart canvas {
+  /* aspect-ratio: 3/1; */
+  height: 1% !important;
 }
 .tablepart {
   display: flex;

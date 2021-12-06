@@ -1,10 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 
+import { Line } from 'react-chartjs-2';
+import Chart from 'chart.js/auto'
+
 import Down from '../../../assets/down.png'
 import Card from '../../../assets/card.png'
 import User from '../../../assets/user.png'
-import Chart from '../../../assets/chart.png'
+import Charts from '../../../assets/chart.png'
 import Previous from '../../../assets/previous.png'
 import Next from '../../../assets/next.png'
 import DAI from '../../../assets/dai.png'
@@ -14,8 +17,34 @@ import MaskGroup2 from '../../../assets/maskgroup2.png'
 import MaskGroup3 from '../../../assets/maskgroup3.png'
 import MaskGroup4 from '../../../assets/maskgroup4.png'
 
-
 import styles from './overview.module.css'
+
+const data = {
+    labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+    datasets: [
+        {
+            label: 'dataset',
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: 'rgba(75,192,192,0.4)',
+            borderColor: '#35D387',
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: 'rgba(75,192,192,1)',
+            pointBackgroundColor: '#fff',
+            pointBorderWidth: 3,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+            pointHoverBorderColor: '#997575',
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data: [10, 15, 20, 14, 13, 12, 16, 20, 20, 15, 17, 14, 16, 18, 18, 16, 18, 20, 20, 18, 17, 14, 18, 12],
+        }
+    ],
+};
 
 const Overview = () => {
 
@@ -51,7 +80,7 @@ const Overview = () => {
                     </div>
                 </div>
                 <div className={styles.chart}>
-
+                    <Line data={data} />
                 </div>
                 <div className={styles.comment}>
                     <div className={styles.card}>
@@ -69,7 +98,7 @@ const Overview = () => {
                         </div>
                     </div>
                     <div className={styles.diagram}>
-                        <Image src={Chart} alt="chart" width={57} height={57} />
+                        <Image src={Charts} alt="chart" width={57} height={57} />
                         <div className={styles.title}>
                             <div className={styles.smallgrey}>Average Monthly Return</div>
                             <div className={styles.bigorange}>-0.20%</div>

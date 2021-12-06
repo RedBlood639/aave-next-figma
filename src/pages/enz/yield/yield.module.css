@@ -60,6 +60,7 @@
   cursor: pointer;
   width: 35%;
   margin: auto;
+  cursor: pointer;
 }
 .opbtn {
   opacity: 0.5;
@@ -155,6 +156,7 @@
   text-align: center;
   color: #ffffff;
   width: 70%;
+  cursor: pointer;
 }
 .hopbtn {
   opacity: 0.5;
@@ -168,7 +170,8 @@
 .normal,
 .smallnormal,
 .bignormal,
-.grey {
+.grey,
+.max {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
@@ -189,6 +192,79 @@
   font-size: 14px;
   line-height: 21px;
   color: #9299b7;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: stretch;
+  background: #353f68;
+  border-radius: 15px;
+  padding: 20px 30px 27px 30px;
+  width: 480px;
+}
+.modalheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modalbody {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.sell {
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 4px;
+}
+.label {
+  display: flex;
+  justify-content: space-between;
+}
+.group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+.inputdiv {
+  display: flex;
+  justify-content: space-between;
+  background: #4e5984;
+  border-radius: 50px;
+  padding: 11px 18px 11px 24px;
+}
+.input {
+  background: transparent;
+  outline: none;
+  border: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.mix {
+  display: flex;
+  grid-gap: 8px;
+  align-items: center;
+}
+.mixcolor {
+  display: flex;
+  grid-gap: 8px;
+  align-items: center;
+  background: #353f68;
+  border-radius: 50px;
+  padding: 7px 11px;
+}
+.max {
+  padding: 2px 6px;
+  color: #222b52;
+  background: #4eb4fe;
+  border-radius: 8px;
 }
 @media screen and (max-width: 1292px) {
   .tempty {
@@ -218,13 +294,34 @@
   }
 }
 @media screen and (max-width: 740px) {
+  .container {
+    width: 90%;
+  }
   .table {
     display: none;
   }
   .hiddentbl {
     display: flex;
     flex-direction: column;
+    padding-bottom: 100px;
     grid-gap: 10px;
+    border-radius: 10px;
+  }
+  .htr {
+    border-radius: 10px;
+  }
+  .hiddentr {
+    border-radius: 10px;
+    padding: 3px 5px 8px 5px;
+    cursor: pointer;
+  }
+  .hopbtn,
+  .hbtn {
+    width: 80px;
+  }
+  .mix {
+    display: grid;
+    grid-gap: 0px;
   }
   .smallnormal {
     font-size: 10px;

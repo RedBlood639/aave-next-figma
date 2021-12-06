@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import styles from './yield.module.css'
+import Modal from '../../../components/Modal/index'
 
 import { BiArrowBack } from 'react-icons/bi'
 import { CgSoftwareUpload, CgSoftwareDownload } from 'react-icons/cg'
@@ -10,10 +10,26 @@ import { RiQuestionLine } from 'react-icons/ri'
 import BigGroup1 from '../../../assets/biggroup1.png'
 
 import data from './data'
+import styles from './yield.module.css'
 
 const Yield = () => {
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return (
         <div className={styles.yield}>
+            {
+                open && (
+                    <Modal onClick={handleClose} />
+                )
+            }
             <div className={styles.container}>
                 <div className={styles.usdc}>
                     <BiArrowBack size={22} color="#87d4ff" />
@@ -54,7 +70,7 @@ const Yield = () => {
                                         </div>
                                         <div className={styles.btn}>
                                             <CgSoftwareDownload size={24} />
-                                            <div>Deposit</div>
+                                            <div onClick={() => handleClickOpen()}>Deposit</div>
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +114,7 @@ const Yield = () => {
                                         </div>
                                         <div className={`${styles.hbtn}`}>
                                             <CgSoftwareDownload size={24} />
-                                            <div>Deposit</div>
+                                            <div onClick={() => handleClickOpen()}>Deposit</div>
                                         </div>
                                     </div >
                                 </div>

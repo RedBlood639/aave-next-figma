@@ -22,7 +22,7 @@ const AppLayout = (props) => {
         <>
             {flag ? (<EnzHeader />) : (<Header />)}
             {props.children}
-            <ScrollTop />
+            {/* <ScrollTop /> */}
             <Footer />
         </>
     )

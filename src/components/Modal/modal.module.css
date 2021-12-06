@@ -1,0 +1,141 @@
+.container {
+  background-color: #00000080;
+  backdrop-filter: blur(10px);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  align-items: center;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: stretch;
+  background: #353f68;
+  border-radius: 15px;
+  padding: 20px 30px 27px 30px;
+  width: 480px;
+}
+.modalheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modalbody {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.sell {
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 4px;
+}
+.label {
+  display: flex;
+  justify-content: space-between;
+}
+.group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+.inputdiv {
+  display: flex;
+  justify-content: space-between;
+  background: #4e5984;
+  border-radius: 50px;
+  padding: 11px 18px 11px 24px;
+}
+.input {
+  background: transparent;
+  outline: none;
+  border: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  width: 80%;
+}
+.mix {
+  display: flex;
+  grid-gap: 8px;
+  align-items: center;
+}
+.mixcolor {
+  display: flex;
+  grid-gap: 8px;
+  align-items: center;
+  background: #353f68;
+  border-radius: 50px;
+  padding: 7px 11px;
+}
+.max {
+  padding: 2px 6px;
+  color: #222b52;
+  background: #4eb4fe;
+  border-radius: 8px;
+}
+
+.normal,
+.smallnormal,
+.bignormal,
+.grey,
+.max {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.smallnormal {
+  font-size: 12px;
+  line-height: 18px;
+}
+.bignormal {
+  font-size: 18px;
+  line-height: 27px;
+}
+.grey {
+  font-size: 14px;
+  line-height: 21px;
+  color: #9299b7;
+}
+.btngroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  background: linear-gradient(65.4deg, #4e89fe 18.74%, #6ac7fc 88.33%);
+  border-radius: 45px;
+  padding: 13px 20px 11px 20px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  width: 30%;
+}
+@media screen and (max-width: 620px) {
+  .modal {
+    padding: 10px 20px 17px 20px;
+    width: 240px;
+  }
+  .input {
+    width: 60%;
+  }
+}

@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add next-images
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-chartjs-2 chart.js
 
 PATH: 
   C:\Users\Hero\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Hero\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Autodesk\Backburner;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;C:\Users\Hero\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\laragon\bin\php\php-7.2.19-Win32-VC15-x64;C:\xampp\php;C:\composer;C:\Program Files (x86)\NetSarang\Xshell 7;C:\Users\Hero\AppData\Local\Microsoft\WindowsApps;C:\Users\Hero\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Hero\AppData\Roaming\npm;C:\Users\Hero\AppData\Local\Yarn\bin;C:\Users\Hero\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Hero\AppData\Roaming\Composer\vendor\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -40,11 +40,16 @@ npm manifest:
       "@emotion/styled": "^11.6.0",
       "@mui/icons-material": "^5.2.0",
       "@mui/material": "^5.2.1",
+      "@styled-system/theme-get": "^5.1.2",
+      "chartist": "^0.11.4",
       "graphql": "^16.0.1",
       "next": "12.0.4",
+      "next-images": "^1.8.4",
       "nprogress": "^0.2.0",
+      "progressbar.js": "^1.1.0",
       "prop-types": "^15.7.2",
       "react": "17.0.2",
+      "react-chartist": "^0.14.4",
       "react-dom": "17.0.2",
       "react-icons": "^4.3.1",
       "styled-components": "^5.3.3"
