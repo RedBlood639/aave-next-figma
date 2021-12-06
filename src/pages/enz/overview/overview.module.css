@@ -80,9 +80,14 @@
 .chart {
   padding-top: 63px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
   /* height: 200px; */
 }
-
+.xaxis {
+  display: flex;
+  justify-content: space-evenly;
+}
 .chart canvas {
   /* aspect-ratio: 3/1; */
   height: 1% !important;

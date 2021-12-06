@@ -81,6 +81,13 @@ const Overview = () => {
                 </div>
                 <div className={styles.chart}>
                     <Line data={data} />
+                    <div className={styles.xaxis}>
+                        <div className={styles.smallnormal}>21.00</div>
+                        <div className={styles.smallnormal}>06.00</div>
+                        <div className={styles.smallnormal}>15.00</div>
+                        <div className={styles.smallnormal}>00.00</div>
+                        <div className={styles.smallnormal}>09.00</div>
+                    </div>
                 </div>
                 <div className={styles.comment}>
                     <div className={styles.card}>
