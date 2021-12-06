@@ -117,7 +117,6 @@ const Deposit = () => {
                         </div>
                         <div
                             className={styles.continue}
-                            onClick={() => router.push("/continue/cdeposit")}
                         >
                             Continue
                         </div>

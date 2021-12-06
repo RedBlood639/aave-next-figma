@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import DAI from '../../assets/dai.png'
 import Divide from '../../assets/divide3.png'
@@ -12,6 +13,8 @@ import data from './data.json'
 import styles from './share.module.css'
 
 const CDeposit = () => {
+    const router = useRouter()
+
     return (
         <div className={styles.cdeposit}>
             <div className={styles.container}>
@@ -50,7 +53,7 @@ const CDeposit = () => {
                         <div className={styles.tablebody}>
                             {
                                 data.map((item, index) => (
-                                    <div className={styles.tr} key={index}>
+                                    <div className={styles.tr} key={index} onClick={() => router.push('/deposit')}>
                                         <div className={styles.assets}>
                                             <div className={styles.image}>
                                                 <Image src={DAI} alt="DAI" width={41} height={41} />

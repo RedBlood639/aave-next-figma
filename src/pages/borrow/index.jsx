@@ -119,7 +119,6 @@ const Borrow = () => {
                         </div>
                         <div
                             className={styles.continue}
-                            onClick={() => router.push("/continue/cborrow")}
                         >
                             Continue
                         </div>

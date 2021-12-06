@@ -29,11 +29,11 @@ const Header = () => {
         },
         {
             title: "DEPOSIT",
-            path: "/deposit",
+            path: "/continue/cdeposit",
         },
         {
             title: "BORROW",
-            path: "/borrow",
+            path: "/continue/cborrow",
         },
     ];
 

@@ -141,7 +141,7 @@ const MyDashboard = () => {
                                     </label>
                                 </div>
                                 <div className={styles.bspace}>
-                                    <div className={styles.deposit}>Deposit</div>
+                                    <div className={styles.deposit} onClick={() => router.push('/continue/cdeposit')}>Deposit</div>
                                     <div className={styles.withdraw} onClick={() => router.push('/withdraw')}>Withdraw</div>
                                 </div>
                             </div>
@@ -168,7 +168,7 @@ const MyDashboard = () => {
                                     </label>
                                 </div>
                                 <div className={styles.bspace}>
-                                    <div className={styles.deposit}>Deposit</div>
+                                    <div className={styles.deposit} onClick={() => router.push('/continue/cdeposit')}>Deposit</div>
                                     <div className={styles.withdraw} onClick={() => router.push('/withdraw')}>Withdraw</div>
                                 </div>
                             </div>
@@ -228,7 +228,7 @@ const MyDashboard = () => {
                                 <div className={styles.bprofit}>4.04%</div>
                                 <div className={styles.bmerge}></div>
                                 <div className={styles.bspace}>
-                                    <div className={styles.deposit}>Borrow</div>
+                                    <div className={styles.deposit} onClick={() => router.push('/continue/cborrow')}>Borrow</div>
                                     <div className={styles.withdraw} onClick={() => router.push('/repay')}>Repay</div>
                                 </div>
                             </div>
@@ -244,7 +244,7 @@ const MyDashboard = () => {
                                 <div className={styles.bprofit}>4.04%</div>
                                 <div className={styles.bmerge}></div>
                                 <div className={styles.bspace}>
-                                    <div className={styles.deposit}>Deposit</div>
+                                    <div className={styles.deposit} onClick={() => router.push('/continue/cborrow')}>Borrow</div>
                                     <div className={styles.withdraw} onClick={() => router.push('/repay')}>Repay</div>
                                 </div>
                             </div>
