@@ -78,20 +78,19 @@
   padding: 16px 22px;
 }
 .chart {
+  position: relative;
+  width: 100%;
+  height: 200px;
   padding-top: 63px;
-  width: 80%;
   display: flex;
   flex-direction: column;
-  margin: auto;
-  /* height: 200px; */
 }
 .xaxis {
   display: flex;
   justify-content: space-evenly;
 }
 .chart canvas {
-  /* aspect-ratio: 3/1; */
-  height: 1% !important;
+  aspect-ratio: 2/1;
 }
 .tablepart {
   display: flex;
@@ -225,6 +224,7 @@
   padding: 62px 0 87px 0;
 }
 .bignormal,
+.largenormal,
 .bigorange {
   font-family: Poppins;
   font-style: normal;
@@ -232,6 +232,9 @@
   font-size: 24px;
   line-height: 36px;
   color: #ffffff;
+}
+.largenormal {
+  font-size: 40px;
 }
 .bigorange {
   color: #ff5621;
@@ -266,7 +269,8 @@
   color: #ff5621;
 }
 .smallgrey {
-  color: #4e59a6;
+  font-size: 16px;
+  color: #afabab;
 }
 .smalllight {
   color: #7b87b6;

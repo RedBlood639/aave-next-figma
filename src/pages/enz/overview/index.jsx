@@ -46,6 +46,54 @@ const data = {
     ],
 };
 
+const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+        legend: {
+            display: false,
+        },
+        tooltip: {
+            callbacks: {
+                title: function (tooltipItem, data) {
+                    return tooltipItem[0].formattedValue;
+                },
+                label: function () {
+                    return;
+                },
+            },
+            yAlign: "bottom",
+            backgroundColor: "black",
+            titleFontSize: 16,
+            titleFontColor: "#0066ff",
+            bodyFontColor: "#000",
+            bodyFontSize: 16,
+            displayColors: false,
+        },
+    },
+    scaleShowValues: true,
+    scales: {
+        x: {
+            ticks: {
+                autoSkip: false,
+            },
+        },
+        yAxes: {
+            stacked: true,
+            beginAtZero: false,
+            ticks: {
+
+                stepSize: 5,
+            },
+        },
+    },
+    elements: {
+        line: {
+            tension: 0.4,
+        },
+    },
+}
+
 const Overview = () => {
 
     return (
@@ -57,7 +105,7 @@ const Overview = () => {
                             Share Price
                         </div>
                         <div className={styles.mixlabelgroup}>
-                            <div className={styles.bignormal}>$1.00</div>
+                            <div className={styles.largenormal}>$1.00</div>
                             <div className={styles.sublabelgroup}>
                                 <div className={styles.smallgreen}>0.08%</div>
                                 <div className={styles.smallnormal}>Past 1D</div>
@@ -80,7 +128,7 @@ const Overview = () => {
                     </div>
                 </div>
                 <div className={styles.chart}>
-                    <Line data={data} />
+                    <Line data={data} options={options} />
                     <div className={styles.xaxis}>
                         <div className={styles.smallnormal}>21.00</div>
                         <div className={styles.smallnormal}>06.00</div>
