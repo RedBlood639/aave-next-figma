@@ -1,48 +1,75 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 
-import { Line } from 'react-chartjs-2';
-import Chart from 'chart.js/auto'
+import { Line } from "react-chartjs-2";
+import Chart from "chart.js/auto";
 
-import Down from '../../../assets/down.png'
-import Card from '../../../assets/card.png'
-import User from '../../../assets/user.png'
-import Charts from '../../../assets/chart.png'
-import Previous from '../../../assets/previous.png'
-import Next from '../../../assets/next.png'
-import DAI from '../../../assets/dai.png'
-import Question from '../../../assets/question.png'
-import MaskGroup1 from '../../../assets/maskgroup1.png'
-import MaskGroup2 from '../../../assets/maskgroup2.png'
-import MaskGroup3 from '../../../assets/maskgroup3.png'
-import MaskGroup4 from '../../../assets/maskgroup4.png'
+import Down from "../../../assets/down.png";
+import Card from "../../../assets/card.png";
+import User from "../../../assets/user.png";
+import Charts from "../../../assets/chart.png";
+import Previous from "../../../assets/previous.png";
+import Next from "../../../assets/next.png";
+import DAI from "../../../assets/dai.png";
+import Question from "../../../assets/question.png";
+import MaskGroup1 from "../../../assets/maskgroup1.png";
+import MaskGroup2 from "../../../assets/maskgroup2.png";
+import MaskGroup3 from "../../../assets/maskgroup3.png";
+import MaskGroup4 from "../../../assets/maskgroup4.png";
 
-import styles from './overview.module.css'
+import styles from "./overview.module.css";
 
 const data = {
-    labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+    labels: [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ],
     datasets: [
         {
-            label: 'dataset',
+            label: "dataset",
             fill: true,
             lineTension: 0.1,
-            backgroundColor: 'rgba(75,192,192,0.4)',
-            borderColor: '#35D387',
-            borderCapStyle: 'butt',
+            backgroundColor: "rgba(75,192,192,0.4)",
+            borderColor: "#35D387",
+            borderCapStyle: "butt",
             borderDash: [],
             borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: 'rgba(75,192,192,1)',
-            pointBackgroundColor: '#fff',
+            borderJoinStyle: "miter",
+            pointBorderColor: "rgba(75,192,192,1)",
+            pointBackgroundColor: "#fff",
             pointBorderWidth: 3,
             pointHoverRadius: 5,
-            pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-            pointHoverBorderColor: '#997575',
+            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+            pointHoverBorderColor: "#997575",
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data: [10, 15, 16, 14, 13, 12, 16, 18, 18, 15, 17, 14, 16, 18, 18, 16, 18, 20, 20, 18, 17, 14, 18, 12],
-        }
+            data: [
+                10, 15, 16, 14, 13, 12, 16, 18, 18, 15, 17, 14, 16, 18, 18, 16, 18, 20,
+                20, 18, 17, 14, 18, 12,
+            ],
+        },
     ],
 };
 
@@ -75,15 +102,13 @@ const options = {
     scales: {
         x: {
             ticks: {
+                display: false,
                 autoSkip: false,
             },
         },
-        yAxes: {
-            stacked: true,
-            beginAtZero: false,
+        y: {
             ticks: {
-
-                stepSize: 5,
+                display: false,
             },
         },
     },
@@ -92,18 +117,15 @@ const options = {
             tension: 0.4,
         },
     },
-}
+};
 
 const Overview = () => {
-
     return (
         <div className={styles.overview}>
             <div className={styles.container}>
                 <div className={styles.selects}>
                     <div className={styles.labelgroup}>
-                        <div className={styles.smallgrey}>
-                            Share Price
-                        </div>
+                        <div className={styles.smallgrey}>Share Price</div>
                         <div className={styles.mixlabelgroup}>
                             <div className={styles.largenormal}>$1.00</div>
                             <div className={styles.sublabelgroup}>
@@ -161,9 +183,7 @@ const Overview = () => {
                     </div>
                 </div>
                 <div className={styles.tablepart}>
-                    <div className={styles.normal}>
-                        Monthly Returns
-                    </div>
+                    <div className={styles.normal}>Monthly Returns</div>
                     <div className={styles.table}>
                         <div className={styles.thead}>
                             <div className={`${styles.smallnormal} ${styles.show}`}>Year</div>
@@ -183,15 +203,33 @@ const Overview = () => {
                         <div className={styles.tbody}>
                             <div className={`${styles.smallnormal} ${styles.show}`}>2021</div>
                             <div className={`${styles.smallnormal} ${styles.show}`}>-</div>
-                            <div className={`${styles.smallgreen} ${styles.show}`}>+0.53%</div>
-                            <div className={`${styles.smallgreen} ${styles.show}`}>+0.53%</div>
-                            <div className={`${styles.smallgreen} ${styles.show}`}>+0.53%</div>
-                            <div className={`${styles.smallgreen} ${styles.hide}`}>+0.53%</div>
-                            <div className={`${styles.smallorange} ${styles.hide}`}>-0.37%</div>
-                            <div className={`${styles.smallorange} ${styles.hide}`}>-0.37%</div>
-                            <div className={`${styles.smallgreen} ${styles.hide}`}>+0.53%</div>
-                            <div className={`${styles.smallgreen} ${styles.hide}`}>+0.53%</div>
-                            <div className={`${styles.smallorange} ${styles.hide}`}>-0.37%</div>
+                            <div className={`${styles.smallgreen} ${styles.show}`}>
+                                +0.53%
+                            </div>
+                            <div className={`${styles.smallgreen} ${styles.show}`}>
+                                +0.53%
+                            </div>
+                            <div className={`${styles.smallgreen} ${styles.show}`}>
+                                +0.53%
+                            </div>
+                            <div className={`${styles.smallgreen} ${styles.hide}`}>
+                                +0.53%
+                            </div>
+                            <div className={`${styles.smallorange} ${styles.hide}`}>
+                                -0.37%
+                            </div>
+                            <div className={`${styles.smallorange} ${styles.hide}`}>
+                                -0.37%
+                            </div>
+                            <div className={`${styles.smallgreen} ${styles.hide}`}>
+                                +0.53%
+                            </div>
+                            <div className={`${styles.smallgreen} ${styles.hide}`}>
+                                +0.53%
+                            </div>
+                            <div className={`${styles.smallorange} ${styles.hide}`}>
+                                -0.37%
+                            </div>
                             <div className={`${styles.smallnormal} ${styles.hide}`}>-</div>
                             <div className={`${styles.smallnormal} ${styles.hide}`}>-</div>
                         </div>
@@ -205,12 +243,22 @@ const Overview = () => {
                     <div className={styles.light}>Valut holdings</div>
                     <div className={styles.simpletable}>
                         <div className={styles.simplethead}>
-                            <div className={`${styles.smallnormal} ${styles.asset}`}>Asset</div>
-                            <div className={`${styles.smallnormal} ${styles.balance}`}>Balance</div>
+                            <div className={`${styles.smallnormal} ${styles.asset}`}>
+                                Asset
+                            </div>
+                            <div className={`${styles.smallnormal} ${styles.balance}`}>
+                                Balance
+                            </div>
                             <div className={`${styles.smallnormal} ${styles.type}`}>Type</div>
-                            <div className={`${styles.smallnormal} ${styles.price}`}>Price</div>
-                            <div className={`${styles.smallnormal} ${styles.value}`}>Value</div>
-                            <div className={`${styles.smallnormal} ${styles.daily}`}>Daily Change</div>
+                            <div className={`${styles.smallnormal} ${styles.price}`}>
+                                Price
+                            </div>
+                            <div className={`${styles.smallnormal} ${styles.value}`}>
+                                Value
+                            </div>
+                            <div className={`${styles.smallnormal} ${styles.daily}`}>
+                                Daily Change
+                            </div>
                             <div className={`${styles.smallnormal} ${styles.allocation}`}>
                                 <div>Allocation</div>
                                 <Image src={Down} alt="Down" width={13} height={6} />
@@ -224,12 +272,24 @@ const Overview = () => {
                                     <div className={styles.smallgrey}>USD Coin</div>
                                 </div>
                             </div>
-                            <div className={`${styles.smallnormal} ${styles.tbalance}`}>30.00</div>
-                            <div className={`${styles.smallnormal} ${styles.ttype}`}>Assets</div>
-                            <div className={`${styles.smallnormal} ${styles.tprice}`}>$1.00</div>
-                            <div className={`${styles.smallnormal} ${styles.tvalue}`}>$29.88</div>
-                            <div className={`${styles.smallorange} ${styles.tdaily}`}>-0.07%</div>
-                            <div className={`${styles.smallnormal} ${styles.tallocation}`}>100%</div>
+                            <div className={`${styles.smallnormal} ${styles.tbalance}`}>
+                                30.00
+                            </div>
+                            <div className={`${styles.smallnormal} ${styles.ttype}`}>
+                                Assets
+                            </div>
+                            <div className={`${styles.smallnormal} ${styles.tprice}`}>
+                                $1.00
+                            </div>
+                            <div className={`${styles.smallnormal} ${styles.tvalue}`}>
+                                $29.88
+                            </div>
+                            <div className={`${styles.smallorange} ${styles.tdaily}`}>
+                                -0.07%
+                            </div>
+                            <div className={`${styles.smallnormal} ${styles.tallocation}`}>
+                                100%
+                            </div>
                         </div>
                     </div>
                     <div className={`${styles.submenutable} ${styles.tablehide}`}>
@@ -252,7 +312,9 @@ const Overview = () => {
                         </div>
                         <div className={styles.subtr}>
                             <div className={`${styles.left} ${styles.normal}`}>Balance:</div>
-                            <div className={`${styles.right} ${styles.normal}`}>Prosperity Integration</div>
+                            <div className={`${styles.right} ${styles.normal}`}>
+                                Prosperity Integration
+                            </div>
                         </div>
                         <div className={styles.subtr}>
                             <div className={`${styles.left} ${styles.normal}`}>Type:</div>
@@ -267,11 +329,17 @@ const Overview = () => {
                             <div className={`${styles.right} ${styles.normal}`}>$29.88</div>
                         </div>
                         <div className={styles.subtr}>
-                            <div className={`${styles.left} ${styles.normal}`}>Daily change:</div>
-                            <div className={`${styles.right} ${styles.smallorange}`}>-0.07%</div>
+                            <div className={`${styles.left} ${styles.normal}`}>
+                                Daily change:
+                            </div>
+                            <div className={`${styles.right} ${styles.smallorange}`}>
+                                -0.07%
+                            </div>
                         </div>
                         <div className={styles.subtr}>
-                            <div className={`${styles.left} ${styles.normal}`}>Allocation:</div>
+                            <div className={`${styles.left} ${styles.normal}`}>
+                                Allocation:
+                            </div>
                             <div className={`${styles.right} ${styles.normal}`}>100%</div>
                         </div>
                     </div>
@@ -288,18 +356,31 @@ const Overview = () => {
                 <div className={styles.submenutable}>
                     <div className={styles.subtr}>
                         <div className={`${styles.left} ${styles.normal}`}>Name</div>
-                        <div className={`${styles.right} ${styles.normal}`}>Prosperity Integration</div>
+                        <div className={`${styles.right} ${styles.normal}`}>
+                            Prosperity Integration
+                        </div>
                     </div>
                     <div className={styles.subtr}>
-                        <div className={`${styles.left} ${styles.normal}`}>Inception date</div>
-                        <div className={`${styles.right} ${styles.normal}`}>Sunday, 31 October 2020 13:37</div>
+                        <div className={`${styles.left} ${styles.normal}`}>
+                            Inception date
+                        </div>
+                        <div className={`${styles.right} ${styles.normal}`}>
+                            Sunday, 31 October 2020 13:37
+                        </div>
                     </div>
                     <div className={styles.subtr}>
                         <div className={`${styles.left} ${styles.normal}`}>Manager</div>
                         <div className={`${styles.right} ${styles.normal}`}>
                             <div className={`${styles.question}`}>
-                                <Image src={MaskGroup1} alt="MaskGroup1" width={45} height={45} />
-                                <div><u>qwe789qdewq80qdw</u></div>
+                                <Image
+                                    src={MaskGroup1}
+                                    alt="MaskGroup1"
+                                    width={45}
+                                    height={45}
+                                />
+                                <div>
+                                    <u>qwe789qdewq80qdw</u>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -321,7 +402,9 @@ const Overview = () => {
                         </div>
                     </div>
                     <div className={styles.subtr}>
-                        <div className={`${styles.left} ${styles.normal}`}>Shares lockup date</div>
+                        <div className={`${styles.left} ${styles.normal}`}>
+                            Shares lockup date
+                        </div>
                         <div className={`${styles.right} ${styles.normal}`}>1 day</div>
                     </div>
                 </div>
@@ -332,17 +415,33 @@ const Overview = () => {
                             <div className={`${styles.left} ${styles.normal}`}>Vault</div>
                             <div className={`${styles.right} ${styles.normal}`}>
                                 <div className={`${styles.question}`}>
-                                    <Image src={MaskGroup2} alt="MaskGroup2" width={45} height={45} />
-                                    <div><u>qwe789qdewq80qdw</u></div>
+                                    <Image
+                                        src={MaskGroup2}
+                                        alt="MaskGroup2"
+                                        width={45}
+                                        height={45}
+                                    />
+                                    <div>
+                                        <u>qwe789qdewq80qdw</u>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div className={styles.subtr}>
-                            <div className={`${styles.left} ${styles.normal}`}>Compleyisd</div>
+                            <div className={`${styles.left} ${styles.normal}`}>
+                                Compleyisd
+                            </div>
                             <div className={`${styles.right} ${styles.normal}`}>
                                 <div className={`${styles.question}`}>
-                                    <Image src={MaskGroup3} alt="MaskGroup3" width={45} height={45} />
-                                    <div><u>qwe789qdewq80qdw</u></div>
+                                    <Image
+                                        src={MaskGroup3}
+                                        alt="MaskGroup3"
+                                        width={45}
+                                        height={45}
+                                    />
+                                    <div>
+                                        <u>qwe789qdewq80qdw</u>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -350,16 +449,23 @@ const Overview = () => {
                             <div className={`${styles.left} ${styles.normal}`}>Deployer</div>
                             <div className={`${styles.right} ${styles.normal}`}>
                                 <div className={`${styles.question}`}>
-                                    <Image src={MaskGroup4} alt="MaskGroup4" width={45} height={45} />
-                                    <div><u>qwe789qdewq80qdw</u></div>
+                                    <Image
+                                        src={MaskGroup4}
+                                        alt="MaskGroup4"
+                                        width={45}
+                                        height={45}
+                                    />
+                                    <div>
+                                        <u>qwe789qdewq80qdw</u>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div >
-    )
-}
+        </div>
+    );
+};
 
-export default Overview
+export default Overview;
