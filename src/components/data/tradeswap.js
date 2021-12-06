@@ -1,11 +1,11 @@
-import Group1 from "../../../assets/group1.png";
-import Group2 from "../../../assets/group2.png";
-import Group3 from "../../../assets/group3.png";
-import Group4 from "../../../assets/group4.png";
-import Group5 from "../../../assets/group5.png";
-import Group6 from "../../../assets/group6.png";
+import Group1 from "../../assets/group1.png";
+import Group2 from "../../assets/group2.png";
+import Group3 from "../../assets/group3.png";
+import Group4 from "../../assets/group4.png";
+import Group5 from "../../assets/group5.png";
+import Group6 from "../../assets/group6.png";
 
-const data = [
+export const data = [
   {
     image: Group6,
     exchange: "Gimini Dollar",
@@ -61,5 +61,3 @@ const data = [
     title: "No price",
   },
 ];
-
-export default data;

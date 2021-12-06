@@ -1,7 +1,7 @@
-import BigGroup1 from "../../../assets/biggroup1.png";
-import BigGroup2 from "../../../assets/biggroup2.png";
+import BigGroup1 from "../../assets/biggroup1.png";
+import BigGroup2 from "../../assets/biggroup2.png";
 
-const data = [
+export const data = [
   {
     image: BigGroup1,
     bignormal: "Yearn",
@@ -45,5 +45,3 @@ const data = [
     temp: "hide",
   },
 ];
-
-export default data;

@@ -7,13 +7,11 @@ import Down from '../../../assets/down.png'
 import BlueDown from '../../../assets/downblue.png'
 import Close from '../../../assets/close.png'
 
-
-
 import { RiArrowUpDownLine } from 'react-icons/ri'
 
 import styles from './tradeswap.module.css'
 
-import data from './data.js'
+import { data } from '../../../components/data/tradeswap'
 
 const TradeSwap = () => {
     const [check, setCheck] = useState(true);

@@ -317,4 +317,7 @@ input:checked + .slider:before {
   .table {
     padding: 10px 20px;
   }
+  .tbest {
+    border-radius: 10px;
+  }
 }

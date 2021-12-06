@@ -37,7 +37,7 @@ const Modal = ({ onClick }) => {
                         <div className={styles.grey}>$1.00</div>
                     </div>
                     <div className={styles.btngroup}>
-                        <div className={styles.btn}>Lend</div>
+                        <div className={styles.btn} onClick={onClick} >Lend</div>
                     </div>
                 </div>
             </div>

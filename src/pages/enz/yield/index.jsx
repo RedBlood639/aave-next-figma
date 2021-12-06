@@ -9,7 +9,7 @@ import { RiQuestionLine } from 'react-icons/ri'
 
 import BigGroup1 from '../../../assets/biggroup1.png'
 
-import data from './data'
+import { data } from '../../../components/data/yield'
 import styles from './yield.module.css'
 
 const Yield = () => {

@@ -44,6 +44,8 @@
 .btn,
 .opbtn {
   display: flex;
+  justify-content: center;
+  align-items: center;
   grid-gap: 9px;
   background: linear-gradient(65.4deg, #4e89fe 18.74%, #6ac7fc 88.33%);
   border-radius: 45px;
@@ -54,7 +56,6 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  text-align: center;
   color: #ffffff;
   margin-bottom: 28px;
   cursor: pointer;
