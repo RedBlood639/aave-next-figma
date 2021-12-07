@@ -48,7 +48,7 @@ const data = {
     datasets: [
         {
             label: "dataset",
-            fill: true,
+            fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",
             borderColor: "#35D387",
@@ -90,11 +90,6 @@ const options = {
                 },
             },
             yAlign: "bottom",
-            backgroundColor: "black",
-            titleFontSize: 16,
-            titleFontColor: "#0066ff",
-            bodyFontColor: "#000",
-            bodyFontSize: 16,
             displayColors: false,
         },
     },
