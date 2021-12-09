@@ -27,6 +27,10 @@ const EnzHeader = () => {
             path: "/enz/tradeswap",
         },
         {
+            title: "Provide Liquidity",
+            path: "/enz/provide",
+        },
+        {
             title: "STAKE",
             path: "/enz/stake",
         },

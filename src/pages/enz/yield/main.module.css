@@ -1,0 +1,112 @@
+.main {
+  padding-top: 13px;
+  background-color: #222b52;
+}
+.container {
+  width: 83%;
+  margin: auto;
+}
+.title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+}
+.inpgroup {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 21px;
+}
+.mixgroup {
+  display: flex;
+  grid-gap: 15px;
+}
+.inputdiv,
+.select {
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+  background: #353f68;
+  border-radius: 50px;
+  padding: 11px 11px 13px 15px;
+  width: 250px;
+}
+.select {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.input {
+  color: white;
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 85%;
+}
+.table {
+  padding-top: 40px;
+  padding-bottom: 64px;
+}
+.thead,
+.tr {
+  display: flex;
+  align-items: center;
+  padding: 13px 23px 12px 27px;
+}
+.tr {
+  background: #353f68;
+  border-radius: 50px;
+}
+.namegroup {
+  display: flex;
+  grid-gap: 9px;
+  width: 40%;
+}
+.lblgroup {
+  display: flex;
+  flex-direction: column;
+}
+.protocolgroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+.balancegroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 5px;
+  width: 15%;
+}
+.apygroup {
+  display: flex;
+  justify-content: flex-end;
+  width: 15%;
+}
+.smallnormal {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffff;
+}
+.normal {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.smallgrey {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9299b7;
+}

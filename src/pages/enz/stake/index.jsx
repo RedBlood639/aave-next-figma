@@ -3,7 +3,6 @@ import Image from 'next/image'
 
 import { VscInfo } from 'react-icons/vsc'
 import Down from '../../../assets/down.png'
-import StakeGroup1 from '../../../assets/stakegroup1.png'
 import styles from './stake.module.css'
 import { data } from '../../../components/data/stake'
 
