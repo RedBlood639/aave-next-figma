@@ -250,8 +250,10 @@
 }
 .mix {
   display: flex;
+  text-align: left;
+  flex-direction: column;
   grid-gap: 8px;
-  align-items: center;
+  /* align-items: center; */
 }
 .mixcolor {
   display: flex;

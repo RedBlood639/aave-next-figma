@@ -6,17 +6,54 @@ import SmallDollor from '../../../assets/smallDollar.png'
 import Down from '../../../assets/down.png'
 import BlueDown from '../../../assets/downblue.png'
 import Close from '../../../assets/close.png'
-
 import { RiArrowUpDownLine } from 'react-icons/ri'
 
+import Modal from '../../../components/Modal'
 import styles from './tradeswap.module.css'
-
+import mstyles from '../../../components/Modal/modal.module.css'
 import { data } from '../../../components/data/tradeswap'
+import { mdata } from '../../../components/data/swap'
 
 const TradeSwap = () => {
     const [check, setCheck] = useState(true);
+    const [flag, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    }
+
+    const handleClose = () => {
+        setOpen(false);
+    }
+
+    const title = "Select a token";
+
     return (
         <div className={styles.tradeswap}>
+            {
+                flag &&
+                <Modal onClick={handleClose} title={title}>
+                    <div className={mstyles.tsmodalbody}>
+                        <div className={mstyles.inputdiv}>
+                            <input type="text" className={mstyles.input} placeholder="Find a token by name or address" />
+                        </div>
+                        <div className={mstyles.border}></div>
+                        <div className={mstyles.scroll}>
+                            {
+                                mdata.map((item, index) => (
+                                    <div className={mstyles.group} key={index}>
+                                        <Image src={item.image} alt={item.image} width={45} height={45} />
+                                        <div className={mstyles.column}>
+                                            <div className={mstyles.normal}>USDC</div>
+                                            <div className={mstyles.grey}>USD Coin</div>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </Modal>
+            }
             <div className={styles.container}>
                 <div className={styles.modal}>
                     <div className={styles.sell}>
@@ -84,7 +121,7 @@ const TradeSwap = () => {
                         </label>
                         <div className={styles.normal}>Show sell assets not currently owned</div>
                     </div>
-                    <div className={styles.btn}>Swap</div>
+                    <div className={styles.btn} onClick={() => handleOpen()}>Swap</div>
                     <div className={styles.alert}>
                         <Image src={Close} alt="Close" width={24} height={24} />
                         <div className={styles.orange}>Could  not construct transaction</div>

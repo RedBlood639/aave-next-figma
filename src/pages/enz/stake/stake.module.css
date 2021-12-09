@@ -1,0 +1,165 @@
+.stake {
+  background-color: #222b52;
+  padding-top: 12px;
+}
+.container {
+  width: 83%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+}
+.border {
+  margin-top: 23px;
+  margin-bottom: 30px;
+  border: 1px solid #2b376b;
+}
+.table,
+.htable {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.thead {
+  display: flex;
+  align-items: center;
+  padding: 13px 12px 12px 27px;
+}
+.tbody {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+}
+.tr {
+  display: flex;
+  align-items: center;
+  background: #353f68;
+  border-radius: 45px;
+  padding: 13px 12px 12px 27px;
+}
+.htable {
+  display: flex;
+  grid-gap: 10px;
+}
+.hsubtable {
+  display: flex;
+  flex-direction: column;
+  background: #353f68;
+  border-radius: 15px;
+}
+.htr {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+  padding: 13px 12px 12px 27px;
+}
+.left {
+  width: 40%;
+  min-width: 40px;
+}
+.right {
+  width: 100%;
+}
+.group {
+  display: flex;
+  align-items: center;
+  grid-gap: 16px;
+  width: 100%;
+}
+.lblgroup {
+  display: flex;
+  flex-direction: column;
+}
+.midgroup {
+  display: flex;
+  justify-content: center;
+  width: 10%;
+}
+.btngroup {
+  display: flex;
+  justify-content: flex-end;
+  grid-gap: 12px;
+  width: 40%;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
+  background: linear-gradient(65.4deg, #4e89fe 18.74%, #6ac7fc 88.33%);
+  border-radius: 50px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+.normal {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.small {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffff;
+}
+.smallgrey {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9299b7;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+@media screen and (max-width: 676px) {
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .table {
+    display: none;
+  }
+  .htr {
+    padding: 7px 6px 6px 17px;
+  }
+  .btngroup {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .normal,
+  .smallgrey,
+  .btn {
+    font-size: 10px;
+  }
+  .btn {
+    width: 100px;
+    justify-content: center;
+    padding: 5px 10px;
+  }
+}
