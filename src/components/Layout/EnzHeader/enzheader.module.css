@@ -85,7 +85,7 @@
   color: white;
   cursor: pointer;
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1108px) {
   .container {
     display: flex;
     justify-content: space-between;

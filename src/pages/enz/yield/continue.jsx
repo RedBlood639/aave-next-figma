@@ -53,8 +53,8 @@ const CYield = () => {
                                 </div>
                                 <div className={mstyles.grey}>$1.00</div>
                             </div>
-                            <div className={mstyles.btngroup}>
-                                <div className={mstyles.btn} onClick={handleClose} >Lend</div>
+                            <div className={styles.btngroup}>
+                                <div className={styles.btn} onClick={handleClose} >Lend</div>
                             </div>
                         </div>
                     </Modal>

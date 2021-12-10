@@ -33,17 +33,21 @@
   padding: 11px 11px 13px 15px;
   width: 250px;
 }
-.select {
-  outline: none;
-  border: none;
-  border-radius: 10px;
-}
 .input {
   color: white;
   background: transparent;
   outline: none;
   border: none;
   width: 85%;
+}
+.select {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  appearance: none;
+  background-image: url("../../../assets/dropdown.png");
+  background-position: center right;
+  background-repeat: no-repeat;
 }
 .table {
   padding-top: 40px;
@@ -54,6 +58,11 @@
   display: flex;
   align-items: center;
   padding: 13px 23px 12px 27px;
+}
+.tbody {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
 }
 .tr {
   background: #353f68;
@@ -72,6 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-gap: 5px;
   width: 30%;
 }
 .balancegroup {
@@ -85,6 +95,32 @@
   display: flex;
   justify-content: flex-end;
   width: 15%;
+}
+.htable {
+  display: none;
+  flex-direction: column;
+  grid-gap: 10px;
+  padding-top: 40px;
+  padding-bottom: 64px;
+}
+.hsubtable {
+  display: flex;
+  flex-direction: column;
+  background: #353f68;
+  border-radius: 15px;
+}
+.htr {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+  padding: 13px 12px 12px 27px;
+}
+.left {
+  width: 40%;
+  min-width: 40px;
+}
+.right {
+  width: 40%;
 }
 .smallnormal {
   font-family: Poppins;
@@ -109,4 +145,67 @@
   font-size: 14px;
   line-height: 21px;
   color: #9299b7;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
+  background: linear-gradient(65.4deg, #4e89fe 18.74%, #6ac7fc 88.33%);
+  border-radius: 50px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+@media screen and (max-width: 970px) {
+  .inpgroup,
+  .mixgroup {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inpgroup {
+    grid-gap: 20px;
+  }
+}
+@media screen and (max-width: 784px) {
+  .container {
+    width: 90%;
+  }
+  .tr {
+    padding: 13px 17px 12px 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .table {
+    display: none;
+  }
+  .htable {
+    display: flex;
+  }
+  .htr {
+    padding: 7px 6px 6px 17px;
+  }
+  .normal,
+  .smallgrey,
+  .btn {
+    font-size: 10px;
+  }
+  .btn {
+    /* width: 100px; */
+    justify-content: center;
+    padding: 5px 10px;
+  }
+  .protocolgroup {
+    width: 100%;
+    min-width: 120px;
+    justify-content: flex-start;
+  }
+  .namegroup {
+    width: 100%;
+    align-items: center;
+  }
 }

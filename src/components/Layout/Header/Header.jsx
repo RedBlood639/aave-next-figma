@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
@@ -47,10 +46,6 @@ const Header = () => {
 
     return (
         <React.Fragment>
-            <Head>
-                <title>AAVE</title>
-                <link rel="icon" href="icon/aave1.png" />
-            </Head>
             <div className={styles.header}>
                 <div className={styles.container}>
                     <div className={styles.logo}>

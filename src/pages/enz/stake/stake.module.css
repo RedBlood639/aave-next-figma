@@ -28,6 +28,10 @@
   padding-top: 50px;
   padding-bottom: 100px;
 }
+.htable {
+  display: none;
+  grid-gap: 10px;
+}
 .thead {
   display: flex;
   align-items: center;
@@ -44,10 +48,6 @@
   background: #353f68;
   border-radius: 45px;
   padding: 13px 12px 12px 27px;
-}
-.htable {
-  display: flex;
-  grid-gap: 10px;
 }
 .hsubtable {
   display: flex;
@@ -144,6 +144,9 @@
   }
   .table {
     display: none;
+  }
+  .htable {
+    display: flex;
   }
   .htr {
     padding: 7px 6px 6px 17px;

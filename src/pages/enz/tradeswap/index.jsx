@@ -41,7 +41,7 @@ const TradeSwap = () => {
                         <div className={mstyles.scroll}>
                             {
                                 mdata.map((item, index) => (
-                                    <div className={mstyles.group} key={index}>
+                                    <div className={mstyles.group1} key={index}>
                                         <Image src={item.image} alt={item.image} width={45} height={45} />
                                         <div className={mstyles.column}>
                                             <div className={mstyles.normal}>USDC</div>

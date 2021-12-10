@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import NProgress from "nprogress";
 import { Router } from "next/router";
 
@@ -16,6 +17,10 @@ Router.events.on("routeChangeError", () => NProgress.done());
 function MyApp({ Component, pageProps }) {
   return (
     <React.Fragment>
+      <Head>
+        <title>AAVE</title>
+        <link rel="icon" href="icon/aave1.png" />
+      </Head>
       <AppLayout>
         <Component {...pageProps} />
       </AppLayout>
