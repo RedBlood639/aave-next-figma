@@ -84,7 +84,7 @@
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
-  width: 80%;
+  width: 100%;
 }
 .border {
   margin: 15px 0 18px 0;
@@ -97,10 +97,12 @@
 }
 .mixcolor {
   display: flex;
-  grid-gap: 8px;
+  justify-content: center;
   align-items: center;
+  grid-gap: 8px;
   background: #353f68;
   border-radius: 50px;
+  width: 100px;
   padding: 7px 11px;
 }
 .max {
@@ -109,6 +111,38 @@
   background: #4eb4fe;
   border-radius: 8px;
 }
+.bmerge {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  padding-top: 18px;
+  padding-bottom: 31px;
+}
+.slippage {
+  padding-bottom: 9px;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(65.4deg, #4e89fe 18.74%, #6ac7fc 88.33%);
+  border-radius: 45px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 13px 20px 11px 20px;
+  width: 150px;
+}
+.liquidity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Font */
 .normal,
 .smallnormal,
 .bignormal,
@@ -135,6 +169,7 @@
   line-height: 21px;
   color: #9299b7;
 }
+/* Scroll */
 .scroll {
   max-height: 200px;
   overflow-y: auto;
@@ -159,12 +194,79 @@
   background: #8996ca;
   height: 5em;
 }
+/* toggle button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4e5984;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: #6f56fd;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 @media screen and (max-width: 620px) {
   .modal {
     padding: 10px 20px 17px 20px;
     width: 240px;
   }
   .input {
+    width: 80%;
+  }
+  .btn {
     width: 60%;
+  }
+  .normal,
+  .max,
+  .grey {
+    font-size: 12px;
+  }
+  .bignormal {
+    font-size: 14px;
   }
 }

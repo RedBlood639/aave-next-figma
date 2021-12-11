@@ -33,6 +33,20 @@
   padding: 11px 11px 13px 15px;
   width: 250px;
 }
+.select {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #9da6cb;
+}
+.option {
+  background: #353f68;
+  outline: none;
+  border: none;
+  height: 60px;
+}
 .input {
   color: white;
   background: transparent;

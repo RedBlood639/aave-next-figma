@@ -101,6 +101,7 @@
 }
 .bmerge {
   display: flex;
+  align-items: center;
   grid-gap: 10px;
   padding-top: 18px;
   padding-bottom: 31px;
