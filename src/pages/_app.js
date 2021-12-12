@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
     <React.Fragment>
       <Head>
         <title>AAVE</title>
-        <link rel="icon" href="icon/aave1.png" />
+        <link rel="icon" href="icon/aave1.ico" />
       </Head>
       <AppLayout>
         <Component {...pageProps} />
