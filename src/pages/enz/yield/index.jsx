@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
@@ -11,6 +11,7 @@ const Yield = () => {
   const router = useRouter();
 
   const [tbl_data, setTbl_data] = useState(data);
+
   const overMouse = (index) => {
     const tempData = [...tbl_data];
     tempData[index].enter = true;
@@ -18,6 +19,12 @@ const Yield = () => {
   };
 
   const outMouse = (index) => {
+    const tempData = [...tbl_data];
+    tempData[index].enter = false;
+    setTbl_data(tempData);
+  };
+
+  const downMouse = (index) => {
     const tempData = [...tbl_data];
     tempData[index].enter = false;
     setTbl_data(tempData);
@@ -34,18 +41,14 @@ const Yield = () => {
               <input type="text" className={styles.input} />
             </div>
             <select className={styles.select}>
-              <option disabled selected>
-                Filter by protocols
-              </option>
+              <option disabled={""}>Filter by protocols</option>
               <option>AAVE</option>
               <option>Enzyme</option>
             </select>
           </div>
           <div className={styles.selectdiv}>
             <select className={styles.select}>
-              <option disabled selected>
-                Filter by protocols
-              </option>
+              <option disabled={""}>Filter by protocols</option>
               <option>AAVE</option>
               <option>Enzyme</option>
             </select>
@@ -105,7 +108,10 @@ const Yield = () => {
                   {item.enter && (
                     <div
                       className={styles.btn}
-                      onClick={() => router.push("/enz/yield/continue")}
+                      onClick={() => {
+                        downMouse(index);
+                        router.push("/enz/yield/continue");
+                      }}
                     >
                       Explore
                     </div>
@@ -174,13 +180,16 @@ const Yield = () => {
                 <div className={styles.right}>
                   <div
                     className={styles.apygroup}
-                    onMouseEnter={() => overMouse(index)}
-                    onMouseLeave={() => outMouse(index)}
+                    onMouseOver={() => overMouse(index)}
+                    onMouseOut={() => outMouse(index)}
                   >
                     {item.enter && (
                       <div
                         className={styles.btn}
-                        onClick={() => router.push("/enz/yield/continue")}
+                        onClick={() => {
+                          downMouse(index);
+                          router.push("/enz/yield/continue");
+                        }}
                       >
                         Explore
                       </div>
